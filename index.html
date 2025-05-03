@@ -120,6 +120,73 @@
         }
       }
 
+      /* Mobile-specific styles */
+      @media (max-width: 768px) {
+        .notification-banner {
+          padding: 8px 0;
+          border-bottom: 3px solid var(--accent-color);
+        }
+
+        .notification-content {
+          gap: 1.5rem;
+          animation: scroll 15s linear infinite;
+        }
+
+        .notification-message {
+          font-size: 1rem;
+          padding: 6px 15px;
+          border-radius: 20px;
+          backdrop-filter: blur(8px);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .notification-message i {
+          font-size: 1.2rem;
+          animation: icon-pulse 2s infinite;
+        }
+
+        .notification-message:hover {
+          transform: scale(1.05);
+          background: rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes icon-pulse {
+          0% {
+            transform: scale(1);
+            text-shadow: 0 0 5px rgba(250, 204, 21, 0.5);
+          }
+          50% {
+            transform: scale(1.1);
+            text-shadow: 0 0 15px rgba(250, 204, 21, 0.8);
+          }
+          100% {
+            transform: scale(1);
+            text-shadow: 0 0 5px rgba(250, 204, 21, 0.5);
+          }
+        }
+      }
+
+      @media (max-width: 576px) {
+        .notification-banner {
+          padding: 6px 0;
+        }
+
+        .notification-content {
+          gap: 1rem;
+          animation: scroll 12s linear infinite;
+        }
+
+        .notification-message {
+          font-size: 0.9rem;
+          padding: 5px 12px;
+          border-radius: 15px;
+        }
+
+        .notification-message i {
+          font-size: 1.1rem;
+        }
+      }
+
       /* Adjust navbar position to account for notification banner */
       .navbar {
         top: 50px;
@@ -163,7 +230,6 @@
       .brand-logo {
         height: 80px;
         width: auto;
-        margin-right: 15px;
         transition: var(--transition);
         object-fit: contain;
       }
@@ -820,7 +886,7 @@
         background: var(--primary-color);
       }
 
-      /* Responsive */
+      /* Responsive Adjustments */
       @media (max-width: 992px) {
         .hero-image img {
           height: 400px;
@@ -836,6 +902,14 @@
       }
 
       @media (max-width: 768px) {
+        .navbar {
+          padding: 0.5rem 0;
+        }
+
+        .brand-logo {
+          height: 50px;
+        }
+
         .main-title {
           font-size: 2.5rem;
         }
@@ -867,6 +941,43 @@
 
         .handle-circle i {
           font-size: 1rem;
+        }
+
+        .experience-badge {
+          bottom: 10px;
+          right: 10px;
+          padding: 0.5rem 0.8rem;
+        }
+
+        .experience-badge .number {
+          font-size: 1.2rem;
+        }
+
+        .experience-badge .text {
+          font-size: 0.7rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .main-title {
+          font-size: 2rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1rem;
+        }
+
+        .hero-image img {
+          height: 250px;
+        }
+
+        .feature-card {
+          padding: 0.5rem 1rem;
+        }
+
+        .hero-btn {
+          padding: 0.6rem 1.2rem;
+          font-size: 0.9rem;
         }
       }
 
@@ -1584,6 +1695,32 @@
         }
       }
     </style>
+    <style>
+      .navbar-brand-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        direction: ltr !important;
+        text-align: center;
+        padding: 0;
+        line-height: 1.1;
+        min-width: 120px;
+      }
+      .navbar-brand-text span {
+        display: block;
+        white-space: nowrap;
+      }
+      @media (max-width: 576px) {
+        .navbar-brand-text {
+          font-size: 1.2rem;
+          min-width: 100px;
+        }
+        .navbar-brand-text span {
+          font-size: 1.1rem !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Notification Banner -->
@@ -1627,16 +1764,30 @@
     >
       <div class="container">
         <!-- اللوجو على اليمين -->
-        <a class="navbar-brand ms-auto" href="#">
-          <img
-            src="images/logo.jpg"
-            alt="OP DR AHMEt TOSUN RHINOPLASTY SURGEON Logo"
-            class="brand-logo"
-          />
-          <div class="brand-content">
-            <span class="logo-text">OP DR AHMEt TOSUN RHINOPLASTY SURGEON</span>
-            <span class="logo-subtext">Rhinoplasty Expert</span>
-          </div>
+        <a
+          class="navbar-brand ms-auto navbar-brand-text"
+          href="#"
+          style="text-align: center; line-height: 1.1; padding: 0"
+        >
+          <span
+            style="
+              display: block;
+              font-weight: bold;
+              color: #2176ae;
+              font-size: 1.8rem;
+              letter-spacing: 1px;
+            "
+            >OP DR AHMET TOSUN</span
+          >
+          <span
+            style="
+              display: block;
+              color: #3ba1c8;
+              font-size: 1.4rem;
+              letter-spacing: 1px;
+            "
+            >RHINOPLASTY SURGEON</span
+          >
         </a>
 
         <!-- زر الموبايل -->
@@ -1679,24 +1830,68 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section" id="home">
-      <video
-        autoplay
-        muted
-        loop
-        class="hero-video"
+    <header
+      class="hero-section"
+      id="home"
+      style="
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, #1a3c5e 0%, #2a4c6e 100%);
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+      "
+    >
+      <!-- Animated Background Elements -->
+      <div
+        class="hero-particles"
         style="
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          object-fit: cover;
-          z-index: 0;
+          z-index: 1;
+          overflow: hidden;
         "
       >
-        <!-- <source src="images/video.mp4" type="video/mp4"> -->
-      </video>
+        <div
+          class="particle"
+          style="
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+          "
+        ></div>
+        <div
+          class="particle"
+          style="
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+          "
+        ></div>
+        <div
+          class="particle"
+          style="
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            animation: float 25s infinite linear;
+          "
+        ></div>
+      </div>
+
+      <!-- Hero Overlay with Gradient -->
       <div
         class="hero-overlay"
         style="
@@ -1706,37 +1901,70 @@
           width: 100%;
           height: 100%;
           background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.4)
+            135deg,
+            rgba(26, 60, 94, 0.8) 0%,
+            rgba(42, 76, 110, 0.6) 100%
           );
-          z-index: 1;
+          z-index: 2;
         "
       ></div>
+
       <div
         class="container"
-        style="position: relative; z-index: 2; padding: 5rem 0"
+        style="position: relative; z-index: 3; padding: 4rem 0"
       >
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <div class="hero-content">
+            <div
+              class="hero-content"
+              style="
+                position: relative;
+                z-index: 3;
+                padding: 2rem;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border-radius: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+              "
+            >
               <h1
                 class="main-title"
                 style="
-                  font-family: 'Cinzel', serif;
+                  font-family: 'Playfair Display', serif;
                   font-size: 4.5rem;
                   font-weight: 700;
                   color: #fff;
                   line-height: 1.2;
                   margin-bottom: 1.5rem;
                   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+                  position: relative;
                 "
               >
                 Redefine Your<br />
                 Confidence with<br />
-                <span class="highlight" style="color: #c2a465"
-                  >DR AHMET TOSUN</span
+                <span
+                  class="highlight"
+                  style="
+                    color: #c2a465;
+                    position: relative;
+                    display: inline-block;
+                  "
                 >
+                  DR AHMET TOSUN
+                  <span
+                    class="title-decoration"
+                    style="
+                      position: absolute;
+                      bottom: -10px;
+                      left: 0;
+                      width: 100%;
+                      height: 3px;
+                      background: linear-gradient(90deg, #c2a465, transparent);
+                      animation: title-underline 2s infinite alternate;
+                    "
+                  ></span>
+                </span>
               </h1>
               <p
                 class="hero-subtitle"
@@ -1747,6 +1975,7 @@
                   line-height: 1.8;
                   margin-bottom: 2.5rem;
                   max-width: 520px;
+                  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
                 "
               >
                 Internationally renowned rhinoplasty surgeon with 10+ years of
@@ -1764,41 +1993,14 @@
                 <div
                   class="feature-card"
                   style="
-                    background: rgba(255, 255, 255, 0.05);
-                    backdrop-filter: blur(12px);
-                    padding: 1rem 2rem;
-                    border-radius: 20px;
-                    border: 1px solid rgba(194, 164, 101, 0.3);
-                    transition: transform 0.4s, box-shadow 0.4s;
-                  "
-                >
-                  <i
-                    class="fas fa-certificate"
-                    style="
-                      font-size: 2rem;
-                      color: #c2a465;
-                      margin-right: 0.7rem;
-                    "
-                  ></i>
-                  <span
-                    style="
-                      font-family: 'Lora', serif;
-                      font-size: 1.2rem;
-                      font-weight: 600;
-                      color: #fff;
-                    "
-                    >Board Certified</span
-                  >
-                </div>
-                <div
-                  class="feature-card"
-                  style="
-                    background: rgba(255, 255, 255, 0.05);
-                    backdrop-filter: blur(12px);
-                    padding: 1rem 2rem;
-                    border-radius: 20px;
-                    border: 1px solid rgba(194, 164, 101, 0.3);
-                    transition: transform 0.4s, box-shadow 0.4s;
+                    display: flex;
+                    align-items: center;
+                    background: rgba(255, 255, 255, 0.1);
+                    padding: 1rem 1.5rem;
+                    border-radius: 15px;
+                    backdrop-filter: blur(5px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    transition: all 0.3s ease;
                   "
                 >
                   <i
@@ -1822,12 +2024,45 @@
                 <div
                   class="feature-card"
                   style="
-                    background: rgba(255, 255, 255, 0.05);
-                    backdrop-filter: blur(12px);
-                    padding: 1rem 2rem;
-                    border-radius: 20px;
-                    border: 1px solid rgba(194, 164, 101, 0.3);
-                    transition: transform 0.4s, box-shadow 0.4s;
+                    display: flex;
+                    align-items: center;
+                    background: rgba(255, 255, 255, 0.1);
+                    padding: 1rem 1.5rem;
+                    border-radius: 15px;
+                    backdrop-filter: blur(5px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    transition: all 0.3s ease;
+                  "
+                >
+                  <i
+                    class="fas fa-shield-alt"
+                    style="
+                      font-size: 2rem;
+                      color: #c2a465;
+                      margin-right: 0.7rem;
+                    "
+                  ></i>
+                  <span
+                    style="
+                      font-family: 'Lora', serif;
+                      font-size: 1.2rem;
+                      font-weight: 600;
+                      color: #fff;
+                    "
+                    >Safe Procedures</span
+                  >
+                </div>
+                <div
+                  class="feature-card"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    background: rgba(255, 255, 255, 0.1);
+                    padding: 1rem 1.5rem;
+                    border-radius: 15px;
+                    backdrop-filter: blur(5px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    transition: all 0.3s ease;
                   "
                 >
                   <i
@@ -1854,7 +2089,7 @@
                 style="display: flex; gap: 1.8rem; flex-wrap: wrap"
               >
                 <a
-                  href="tel:+905333931692"
+                  href="tel:+905518901167"
                   class="hero-btn phone-btn"
                   style="
                     background: linear-gradient(135deg, #c2a465, #a68b3e);
@@ -1871,13 +2106,28 @@
                     text-decoration: none;
                     box-shadow: 0 6px 20px rgba(194, 164, 101, 0.5);
                     transition: transform 0.4s, box-shadow 0.4s;
+                    position: relative;
+                    overflow: hidden;
                   "
                 >
                   <i class="fas fa-phone-alt"></i>
-                  <span>+90 533 393 16 92</span>
+                  <span>+90 551 890 11 67</span>
+                  <span
+                    class="btn-pulse"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      background: rgba(255, 255, 255, 0.2);
+                      border-radius: 50px;
+                      animation: pulse 2s infinite;
+                    "
+                  ></span>
                 </a>
                 <a
-                  href="https://wa.me/905333931692"
+                  href="https://wa.me/905518901167"
                   target="_blank"
                   class="hero-btn consultation-btn"
                   style="
@@ -1894,16 +2144,43 @@
                     gap: 0.7rem;
                     text-decoration: none;
                     transition: background 0.4s, color 0.4s, box-shadow 0.4s;
+                    position: relative;
+                    overflow: hidden;
                   "
                 >
                   Free Consultation <i class="fas fa-arrow-right"></i>
+                  <span
+                    class="btn-glow"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      background: linear-gradient(
+                        90deg,
+                        transparent,
+                        rgba(194, 164, 101, 0.2),
+                        transparent
+                      );
+                      animation: glow 2s infinite;
+                    "
+                  ></span>
                 </a>
               </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="hero-slider">
-              <div class="swiper hero-swiper">
+            <div class="hero-slider" style="position: relative">
+              <div
+                class="swiper hero-swiper"
+                style="
+                  border-radius: 30px;
+                  overflow: hidden;
+                  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+                  border: 2px solid #c2a465;
+                "
+              >
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div
@@ -1912,7 +2189,6 @@
                         position: relative;
                         overflow: hidden;
                         border-radius: 30px;
-                        border: 2px solid #c2a465;
                         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
                       "
                     >
@@ -1920,8 +2196,28 @@
                         src="images/14.jpg"
                         alt="Dr Ahmet Tosun Rhinoplasty Surgeon"
                         loading="lazy"
-                        style="width: 100%; height: 550px; object-fit: cover"
+                        style="
+                          width: 100%;
+                          height: 550px;
+                          object-fit: cover;
+                          transition: transform 0.5s ease;
+                        "
                       />
+                      <div
+                        class="image-overlay"
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                          background: linear-gradient(
+                            to bottom,
+                            transparent 70%,
+                            rgba(0, 0, 0, 0.5)
+                          );
+                        "
+                      ></div>
                     </div>
                   </div>
                   <div class="swiper-slide">
@@ -1931,7 +2227,6 @@
                         position: relative;
                         overflow: hidden;
                         border-radius: 30px;
-                        border: 2px solid #c2a465;
                         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
                       "
                     >
@@ -1939,258 +2234,194 @@
                         src="images/9.jpg"
                         alt="Dr Ahmet Tosun Clinic"
                         loading="lazy"
-                        style="width: 100%; height: 550px; object-fit: cover"
+                        style="
+                          width: 100%;
+                          height: 550px;
+                          object-fit: cover;
+                          transition: transform 0.5s ease;
+                        "
                       />
+                      <div
+                        class="image-overlay"
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                          background: linear-gradient(
+                            to bottom,
+                            transparent 70%,
+                            rgba(0, 0, 0, 0.5)
+                          );
+                        "
+                      ></div>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-pagination" style="bottom: 40px"></div>
-                <div
-                  class="experience-badge"
+              </div>
+              <div
+                class="experience-badge"
+                style="
+                  position: absolute;
+                  bottom: 20px;
+                  right: 20px;
+                  background: rgba(194, 164, 101, 0.9);
+                  color: #fff;
+                  padding: 1rem 1.5rem;
+                  border-radius: 15px;
+                  text-align: center;
+                  backdrop-filter: blur(5px);
+                  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                  z-index: 4;
+                "
+              >
+                <span
+                  class="number"
                   style="
-                    position: absolute;
-                    top: 30px;
-                    right: 30px;
-                    background: linear-gradient(135deg, #c2a465, #a68b3e);
-                    color: #fff;
-                    width: 140px;
-                    height: 140px;
-                    border-radius: 50%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    box-shadow: 0 8px 25px rgba(194, 164, 101, 0.6);
-                    animation: pulse 2s infinite;
+                    display: block;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    line-height: 1;
                   "
+                  >10+</span
                 >
-                  <span
-                    class="number"
-                    style="
-                      font-family: 'Cinzel', serif;
-                      font-size: 2.5rem;
-                      font-weight: 700;
-                    "
-                    >10+</span
-                  >
-                  <span
-                    class="text"
-                    style="
-                      font-family: 'Lora', serif;
-                      font-size: 1rem;
-                      font-weight: 600;
-                    "
-                    >Years Experience</span
-                  >
-                </div>
+                <span class="text" style="font-size: 1rem; opacity: 0.9"
+                  >Years Experience</span
+                >
               </div>
             </div>
           </div>
         </div>
       </div>
-      <canvas
-        id="three-canvas"
-        style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-          opacity: 0.2;
-        "
-      ></canvas>
+
       <style>
-        .hero-section {
-          position: relative;
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          overflow: hidden;
+        @keyframes float {
+          0% {
+            transform: translateY(0) translateX(0);
+            opacity: 0;
+          }
+          50% {
+            opacity: 0.5;
+          }
+          100% {
+            transform: translateY(-100vh) translateX(100px);
+            opacity: 0;
+          }
         }
-        .feature-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 10px 25px rgba(194, 164, 101, 0.4);
+
+        @keyframes title-underline {
+          0% {
+            width: 0;
+            left: 0;
+          }
+          100% {
+            width: 100%;
+            left: 0;
+          }
         }
-        .hero-btn:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 8px 25px rgba(194, 164, 101, 0.6);
-        }
-        .consultation-btn:hover {
-          background: #c2a465;
-          color: #fff;
-        }
+
         @keyframes pulse {
           0% {
             transform: scale(1);
+            opacity: 0.5;
           }
           50% {
-            transform: scale(1.05);
+            transform: scale(1.1);
+            opacity: 0;
           }
           100% {
             transform: scale(1);
+            opacity: 0;
           }
         }
-        @media (max-width: 991px) {
-          .hero-section {
-            min-height: auto;
-            padding: 3rem 0;
+
+        @keyframes glow {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+
+        .feature-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+          background: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        .hero-btn:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-swiper .swiper-slide:hover img {
+          transform: scale(1.05);
+        }
+
+        @media (max-width: 992px) {
+          .hero-content {
+            margin-bottom: 2rem;
           }
           .main-title {
-            font-size: 3.2rem;
-          }
-          .hero-subtitle {
-            font-size: 1.2rem;
-          }
-          .hero-cta {
-            flex-direction: column;
-            align-items: stretch;
-          }
-          .hero-btn {
-            justify-content: center;
+            font-size: 3.5rem !important;
           }
           .hero-image img {
-            height: 450px;
+            height: 400px;
           }
         }
-        @media (max-width: 576px) {
+
+        @media (max-width: 768px) {
           .main-title {
-            font-size: 2.5rem;
+            font-size: 2.5rem !important;
           }
           .hero-subtitle {
-            font-size: 1rem;
+            font-size: 1.2rem !important;
           }
           .feature-card {
-            padding: 0.8rem 1.5rem;
+            min-width: 100% !important;
+            padding: 0.8rem 1.2rem !important;
+          }
+          .hero-btn {
+            width: 100% !important;
+            justify-content: center !important;
+            font-size: 1.1rem !important;
+            padding: 0.8rem 1.5rem !important;
           }
           .hero-image img {
-            height: 350px;
+            height: 300px;
           }
-          .experience-badge {
-            width: 110px;
-            height: 110px;
+          .hero-content {
+            padding: 1.5rem !important;
+            margin: 1rem !important;
           }
-          .number {
-            font-size: 2rem;
+        }
+
+        @media (max-width: 576px) {
+          .main-title {
+            font-size: 2rem !important;
           }
-          .text {
-            font-size: 0.9rem;
+          .hero-subtitle {
+            font-size: 1rem !important;
+          }
+          .hero-image img {
+            height: 250px;
+          }
+          .feature-card {
+            padding: 0.6rem 1rem !important;
+          }
+          .hero-btn {
+            font-size: 1rem !important;
+            padding: 0.7rem 1.2rem !important;
+          }
+          .hero-content {
+            padding: 1rem !important;
+            margin: 0.5rem !important;
           }
         }
       </style>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          // Swiper Slider
-          const swiper = new Swiper(".hero-swiper", {
-            loop: true,
-            autoplay: {
-              delay: 3500,
-              disableOnInteraction: false,
-            },
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-            effect: "fade",
-            fadeEffect: {
-              crossFade: true,
-            },
-          });
-
-          // GSAP Animations
-          gsap.registerPlugin(ScrollTrigger);
-          gsap.from(".main-title", {
-            opacity: 0,
-            y: 60,
-            duration: 1.5,
-            ease: "power4.out",
-            scrollTrigger: { trigger: ".hero-section", start: "top 80%" },
-          });
-          gsap.from(".hero-subtitle", {
-            opacity: 0,
-            y: 60,
-            duration: 1.5,
-            delay: 0.4,
-            ease: "power4.out",
-            scrollTrigger: { trigger: ".hero-section", start: "top 80%" },
-          });
-          gsap.from(".feature-card", {
-            opacity: 0,
-            y: 40,
-            duration: 1.2,
-            stagger: 0.3,
-            ease: "power4.out",
-            scrollTrigger: { trigger: ".hero-section", start: "top 80%" },
-          });
-          gsap.from(".hero-btn", {
-            opacity: 0,
-            y: 40,
-            duration: 1.2,
-            stagger: 0.3,
-            ease: "power4.out",
-            scrollTrigger: { trigger: ".hero-section", start: "top 80%" },
-          });
-          gsap.from(".hero-image", {
-            opacity: 0,
-            x: 60,
-            duration: 1.5,
-            ease: "power4.out",
-            scrollTrigger: { trigger: ".hero-section", start: "top 80%" },
-          });
-          gsap.from(".experience-badge", {
-            opacity: 0,
-            scale: 0.7,
-            duration: 1.5,
-            ease: "elastic.out(1, 0.3)",
-            scrollTrigger: { trigger: ".hero-section", start: "top 80%" },
-          });
-
-          // Three.js Background Effect
-          const scene = new THREE.Scene();
-          const camera = new THREE.PerspectiveCamera(
-            75,
-            window.innerWidth / window.innerHeight,
-            0.1,
-            1000
-          );
-          const renderer = new THREE.WebGLRenderer({
-            canvas: document.getElementById("three-canvas"),
-            alpha: true,
-          });
-          renderer.setSize(window.innerWidth, window.innerHeight);
-          camera.position.z = 5;
-
-          const geometry = new THREE.SphereGeometry(0.1, 32, 32);
-          const material = new THREE.MeshBasicMaterial({ color: 0xc2a465 });
-          const particles = [];
-          for (let i = 0; i < 100; i++) {
-            const particle = new THREE.Mesh(geometry, material);
-            particle.position.set(
-              (Math.random() - 0.5) * 10,
-              (Math.random() - 0.5) * 10,
-              (Math.random() - 0.5) * 10
-            );
-            scene.add(particle);
-            particles.push(particle);
-          }
-
-          function animate() {
-            requestAnimationFrame(animate);
-            particles.forEach((p) => {
-              p.position.y += 0.01;
-              if (p.position.y > 5) p.position.y = -5;
-            });
-            renderer.render(scene, camera);
-          }
-          animate();
-
-          window.addEventListener("resize", () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-          });
-        });
-      </script>
     </header>
 
     <!-- Contact Section (Responsive & Clean) -->
@@ -2341,7 +2572,7 @@
             ></span>
           </div>
           <form
-            action="https://formsubmit.co/Info@nileistanbulmedical.com"
+            action="https://formsubmit.co/eisam2350@gmail.com"
             method="POST"
             id="contactForm"
           >
@@ -2580,7 +2811,7 @@
           <div class="package-item">*Postoperative Care</div>
           <div class="package-item">*Professional Interpreter</div>
           <a
-            href="https://wa.me/905333931692"
+            href="https://wa.me/905518901167"
             target="_blank"
             class="get-started-btn"
             style="
@@ -2752,7 +2983,7 @@
                 </ul>
                 <div class="text-center mt-4">
                   <a
-                    href="https://wa.me/905333931692"
+                    href="https://wa.me/905518901167"
                     target="_blank"
                     class="btn btn-outline-primary rounded-pill px-4 py-2"
                     >Schedule Now</a
@@ -3528,7 +3759,7 @@
                   >
                 </div>
                 <div class="contact-buttons mt-4 text-center">
-                  <a href="tel:+905333931692" class="btn btn-primary me-2">
+                  <a href="tel:+905518901167" class="btn btn-primary me-2">
                     <i class="fas fa-phone"></i> Call Now
                   </a>
                   <a
@@ -3538,7 +3769,7 @@
                     <i class="fas fa-envelope"></i> Email
                   </a>
                   <a
-                    href="https://wa.me/905333931692"
+                    href="https://wa.me/905518901167"
                     target="_blank"
                     class="btn btn-success me-2"
                   >
@@ -3621,7 +3852,7 @@
                 <i class="fab fa-instagram"></i>
               </a>
               <a
-                href="https://wa.me/905333931692"
+                href="https://wa.me/905518901167"
                 target="_blank"
                 class="social-icon"
                 title="WhatsApp"
@@ -3904,7 +4135,7 @@
     </script>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/905333931692" target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/905518901167" target="_blank" class="whatsapp-float">
       <div class="whatsapp-content">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-text">Chat with us</span>
