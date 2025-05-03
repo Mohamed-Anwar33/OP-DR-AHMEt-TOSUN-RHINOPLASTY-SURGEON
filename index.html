@@ -1,0 +1,3638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+    <title>OP DR AHMEt TOSUN RHINOPLASTY SURGEON - Expert Rhinoplasty Surgeon</title>
+    <meta
+      name="description"
+      content="Expert rhinoplasty procedures by OP DR AHMEt TOSUN RHINOPLASTY SURGEON. Achieve natural, stunning results with our world-class surgeon."
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- intl-tel-input CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/your-kit-id.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #1a3c5e;
+        --secondary-color: #3b82f6;
+        --accent-color: #facc15;
+        --text-color: #1f2937;
+        --light-bg: #f9fafb;
+        --white: #ffffff;
+        --transition: all 0.3s ease;
+      }
+
+      /* Notification Banner Styles */
+      .notification-banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(45deg, #1a3c5e, #3b82f6);
+        color: var(--white);
+        padding: 12px 0;
+        z-index: 1000;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        border-bottom: 2px solid var(--accent-color);
+      }
+
+      .notification-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        animation: scroll 25s linear infinite;
+      }
+
+      .notification-message {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        white-space: nowrap;
+        font-weight: 600;
+        font-size: 1.2rem;
+        padding: 8px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .notification-message:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .notification-message i {
+        color: var(--accent-color);
+        font-size: 1.4rem;
+        text-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      /* Adjust navbar position to account for notification banner */
+      .navbar {
+        top: 50px;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        color: var(--text-color);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+      }
+
+      /* Navigation */
+      .navbar {
+        background-color: var(--white);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+        transition: var(--transition);
+      }
+
+      .navbar.scrolled {
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+
+      .brand-logo {
+        height: 80px;
+        width: auto;
+        margin-right: 15px;
+        transition: var(--transition);
+        object-fit: contain;
+      }
+
+      .brand-logo:hover {
+        transform: scale(1.05);
+      }
+
+      .brand-content {
+        display: none; /* Hide the old text-based logo */
+      }
+
+      .nav-link {
+        color: var(--primary-color);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        position: relative;
+        transition: var(--transition);
+      }
+
+      .nav-link:hover {
+        color: var(--secondary-color);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: var(--accent-color);
+        transition: var(--transition);
+        transform: translateX(-50%);
+      }
+
+      .nav-link:hover::after {
+        width: 50%;
+      }
+
+      .contact-link {
+        background: linear-gradient(45deg, #3b82f6 0%, #4b9cf6 100%);
+        color: var(--white) !important;
+        border-radius: 25px;
+        padding: 0.5rem 1.5rem !important;
+        transition: var(--transition);
+      }
+
+      .contact-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Hero Section */
+      .hero-section {
+        position: relative;
+        background: linear-gradient(135deg, #1a3c5e 0%, #2a4c6e 100%);
+        padding: 120px 0 80px;
+        overflow: hidden;
+        margin-top: 60px;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        color: var(--white);
+      }
+
+      .main-title {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+
+      .main-title .highlight {
+        color: var(--accent-color);
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+      }
+
+      .feature-cards {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .feature-card {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 252, 0.1);
+        padding: 0.8rem 1.2rem;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+      }
+
+      .feature-card i {
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+        color: var(--accent-color);
+      }
+
+      .hero-cta {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .hero-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .hero-btn.phone-btn {
+        background: linear-gradient(45deg, #facc15 0%, #fadc15 100%);
+        color: var(--primary-color);
+      }
+
+      .hero-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .hero-btn.consultation-btn {
+        background: linear-gradient(45deg, #ffffff 0%, #f9fafb 100%);
+        color: var(--primary-color);
+      }
+
+      .hero-slider {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-swiper {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-image img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .hero-swiper .swiper-slide:hover img {
+        transform: scale(1.05);
+      }
+
+      .experience-badge {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background: var(--accent-color);
+        color: var(--primary-color);
+        padding: 0.8rem 1.2rem;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .experience-badge .number {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .experience-badge .text {
+        font-size: 0.9rem;
+      }
+
+      /* About Section */
+      .about-section {
+        background: var(--light-bg);
+        padding: 5rem 0;
+      }
+
+      .section-title {
+        color: var(--primary-color);
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: var(--accent-color);
+      }
+
+      .about-content .lead {
+        font-size: 1.3rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+      }
+
+      .about-content .description {
+        font-size: 1rem;
+        color: var(--text-color);
+      }
+
+      .stats-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 1rem;
+        background: var(--white);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+      }
+
+      .stat-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .stat-number {
+        font-size: 2rem;
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+
+      .stat-text {
+        font-size: 0.9rem;
+        color: var(--text-color);
+      }
+
+      .expertise-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .expertise-card {
+        background: var(--white);
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: var(--transition);
+      }
+
+      .expertise-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .expertise-card i {
+        font-size: 2rem;
+        color: var(--secondary-color);
+      }
+
+      .expertise-card h3 {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .expertise-card p {
+        font-size: 0.9rem;
+        color: var(--text-color);
+      }
+
+      /* Results Section (Updated) */
+      .results-section {
+        padding: 5rem 0;
+        background: var(--light-bg);
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-description {
+        font-size: 1.1rem;
+        color: var(--text-color);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .results-swiper {
+        padding: 20px 0;
+      }
+
+      .result-card {
+        background: var(--white);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+        margin: 0 auto;
+        max-width: 400px;
+      }
+
+      .result-card:hover {
+        transform: translateY(-8px);
+      }
+
+      .before-after-container {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        user-select: none;
+      }
+
+      .before-image,
+      .after-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .before-image img,
+      .after-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .after-image {
+        width: 50%;
+        transition: width 0.2s ease;
+      }
+
+      .image-label {
+        position: absolute;
+        bottom: 20px;
+        padding: 8px 16px;
+        background: rgba(0, 0, 0, 0.7);
+        color: var(--white);
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .before-image .image-label {
+        left: 20px;
+      }
+
+      .after-image .image-label {
+        right: 20px;
+      }
+
+      .comparison-handle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 100%;
+        background: var(--accent-color);
+        transform: translateX(-50%);
+        cursor: ew-resize;
+        z-index: 10;
+        transition: left 0.2s ease;
+      }
+
+      .handle-circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        background: var(--accent-color);
+        border: 3px solid var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .handle-circle i {
+        color: var(--white);
+        font-size: 1.2rem;
+      }
+
+      .result-info {
+        padding: 1.5rem;
+        text-align: center;
+        background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+      }
+
+      .time-badge {
+        display: inline-block;
+        padding: 0.6rem 1.2rem;
+        background: var(--accent-color);
+        color: var(--primary-color);
+        border-radius: 20px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: var(--white);
+        background: var(--secondary-color);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s ease;
+      }
+
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        background: var(--accent-color);
+      }
+
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 1.2rem;
+      }
+
+      .swiper-pagination-bullet {
+        background: var(--secondary-color);
+        opacity: 0.5;
+        width: 10px;
+        height: 10px;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: var(--accent-color);
+        opacity: 1;
+      }
+
+      /* Testimonials Section */
+      .testimonials-section {
+        background: linear-gradient(135deg, #1a3c5e 0%, #2a4c6e 100%);
+        color: var(--white);
+        padding: 5rem 0;
+      }
+
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        transition: var(--transition);
+        height: 300px; /* Set a fixed height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .testimonial-content p {
+        font-style: italic;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-content h5 {
+        color: var(--accent-color);
+        font-size: 1.2rem;
+      }
+
+      .rating i {
+        color: var(--accent-color);
+        font-size: 1rem;
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        background: var(--light-bg);
+      }
+
+      .accordion-button {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+
+      .accordion-button:not(.collapsed) {
+        background: var(--secondary-color);
+        color: var(--white);
+      }
+
+      .accordion-body {
+        background: var(--white);
+        color: var(--text-color);
+      }
+
+      /* Contact Section (Responsive & Clean) */
+      .contact-section {
+        margin-bottom: 48px;
+      }
+      .contact-flex {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+        margin: 0 auto;
+        max-width: 900px;
+        padding: 24px 8px;
+      }
+      .contact-form-box,
+      .contact-info-box {
+        background: #1a3c5e;
+        color: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        padding: 32px 24px;
+        width: 100%;
+        max-width: 400px;
+        position: static;
+      }
+      .contact-info-box {
+        background: #f5f5f5;
+        color: #1a3c5e;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+      }
+      .contact-form-box h2 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+      .progress-container {
+        margin-bottom: 18px;
+      }
+      .progress {
+        height: 8px;
+        background: #e5e1dc;
+        border-radius: 8px;
+      }
+      .progress-bar {
+        background: #facc15;
+        height: 100%;
+        border-radius: 8px;
+        transition: width 0.3s;
+      }
+      .nose-type {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+      .nose-type label {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .nose-type input[type="radio"] {
+        display: none;
+      }
+      .nose-img {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid transparent;
+        margin-bottom: 2px;
+        transition: border 0.2s;
+      }
+      .nose-type input[type="radio"]:checked + .nose-img {
+        border: 2px solid #facc15;
+      }
+      .contact-form-box label {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+      }
+      .contact-form-box input,
+      .contact-form-box select {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 7px;
+        border: none;
+        margin-bottom: 14px;
+        background: #f0f0f0;
+        color: #222;
+        font-size: 1rem;
+      }
+      .contact-form-box input:focus,
+      .contact-form-box select:focus {
+        outline: 2px solid #facc15;
+      }
+      .contact-form-box .submit-btn {
+        background: #facc15;
+        color: #1a3c5e;
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        width: 100%;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-top: 18px;
+        transition: background 0.2s;
+      }
+      .contact-form-box .submit-btn:hover {
+        background: #e5e1dc;
+      }
+      @media (max-width: 900px) {
+        .contact-flex {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 24px;
+        }
+        .contact-form-box,
+        .contact-info-box {
+          max-width: 100%;
+        }
+      }
+      @media (max-width: 500px) {
+        .contact-form-box,
+        .contact-info-box {
+          padding: 14px 4px;
+          border-radius: 10px;
+        }
+        .contact-form-box h2,
+        .contact-info-box h3 {
+          font-size: 1.05rem;
+        }
+      }
+
+      /* Footer */
+      footer {
+        background: var(--primary-color);
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .hero-image img {
+          height: 400px;
+        }
+
+        .before-after-container {
+          height: 350px;
+        }
+
+        .result-card {
+          max-width: 350px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .main-title {
+          font-size: 2.5rem;
+        }
+
+        .hero-image img {
+          height: 300px;
+        }
+
+        .before-after-container {
+          height: 300px;
+        }
+
+        .result-card {
+          max-width: 300px;
+        }
+
+        .stats-container {
+          grid-template-columns: 1fr;
+        }
+
+        .expertise-cards {
+          grid-template-columns: 1fr;
+        }
+
+        .handle-circle {
+          width: 40px;
+          height: 40px;
+        }
+
+        .handle-circle i {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .container-fluid {
+          flex-direction: column;
+          height: auto;
+          padding: 40px 0 40px 0;
+        }
+        .form-container,
+        .right-section {
+          max-width: 100%;
+          width: 100%;
+          margin-left: 0;
+          margin-bottom: 24px;
+          margin-top: 24px;
+          border-radius: 16px;
+          padding: 18px 10px;
+        }
+        .right-section {
+          margin-bottom: 0;
+        }
+        .arrow {
+          display: none;
+        }
+        .hero-cta {
+          flex-direction: column !important;
+          gap: 10px !important;
+          align-items: stretch !important;
+          width: 100%;
+          margin-top: 18px;
+        }
+        .hero-btn {
+          width: 100% !important;
+          justify-content: center !important;
+          font-size: 1rem !important;
+          padding: 0.8rem 0.5rem !important;
+          margin-bottom: 0 !important;
+          border-radius: 18px !important;
+        }
+        .hero-btn i {
+          font-size: 1.1em !important;
+        }
+      }
+      @media (max-width: 500px) {
+        .form-container,
+        .right-section {
+          padding: 10px 2vw;
+          border-radius: 10px;
+        }
+        .form-container h2,
+        .right-section h3 {
+          font-size: 1.1rem;
+        }
+        .package-item {
+          font-size: 0.85rem;
+          padding: 10px;
+        }
+        .hero-btn {
+          font-size: 0.97rem !important;
+          padding: 0.7rem 0.3rem !important;
+        }
+        .hero-btn i {
+          font-size: 1em !important;
+        }
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+      }
+      .container-fluid {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .form-container,
+      .right-section {
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+      .container-fluid {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      .form-container {
+        background-color: #1a3c5e;
+        color: white;
+        border-radius: 20px;
+        padding: 30px;
+        max-width: 400px;
+        width: 100%;
+        position: relative;
+      }
+      .form-container h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .form-container label {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+      }
+      .form-container input,
+      .form-container select {
+        background-color: #f0f0f0;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 10px 10px 35px;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .form-container select {
+        padding: 10px;
+      }
+      .nose-type {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .nose-type label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .nose-type input {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+      .nose-icon {
+        width: 20px;
+        height: 20px;
+        fill: #f0f0f0;
+      }
+      .submit-btn {
+        background-color: #d3d3d3;
+        color: #333;
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        width: 100%;
+        font-weight: bold;
+      }
+      .submit-btn:hover {
+        background-color: #c0c0c0;
+      }
+      .right-section {
+        background-color: #f5f5f5;
+        padding: 30px;
+        border-radius: 20px;
+        max-width: 400px;
+        width: 100%;
+        margin-left: 20px;
+        text-align: left;
+      }
+      .right-section h3 {
+        color: #1a3c5e;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .right-section p {
+        color: #555;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+      .package-item {
+        background-color: #e6e4df;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+        color: #333;
+      }
+      .get-started-btn {
+        background-color: #1a3c5e;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        width: 100%;
+        font-weight: bold;
+        text-align: center;
+      }
+      .get-started-btn:hover {
+        background-color: #15334d;
+      }
+      .progress-container {
+        margin-bottom: 15px;
+      }
+      .arrow {
+        position: absolute;
+        top: 20px;
+        left: -50px;
+        width: 40px;
+        height: 40px;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10 C70 30, 70 70, 50 90" stroke="white" stroke-width="5" fill="none"/><path d="M50 90 L40 80 L60 80 Z" fill="white"/></svg>')
+          no-repeat;
+        background-size: contain;
+      }
+      .input-icon {
+        position: relative;
+      }
+      .input-icon i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+      }
+      section {
+        margin-bottom: 48px;
+        position: static;
+      }
+
+      @media (max-width: 900px) {
+        .feature-cards {
+          flex-direction: column !important;
+          gap: 10px !important;
+          align-items: stretch !important;
+          width: 100%;
+        }
+        .feature-card {
+          flex-direction: row !important;
+          align-items: center !important;
+          width: 100% !important;
+          margin-bottom: 8px !important;
+          justify-content: flex-start !important;
+          padding: 0.7rem 1rem !important;
+        }
+        .feature-card i {
+          font-size: 1.2rem !important;
+          margin-right: 10px !important;
+          margin-bottom: 0 !important;
+        }
+        .feature-card span {
+          font-size: 1rem !important;
+        }
+      }
+      @media (max-width: 500px) {
+        .feature-card {
+          font-size: 0.97rem !important;
+          padding: 0.6rem 0.5rem !important;
+        }
+        .feature-card i {
+          font-size: 1rem !important;
+          margin-right: 8px !important;
+        }
+      }
+
+      /* Floating WhatsApp Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: linear-gradient(45deg, #25d366 0%, #128c7e 100%);
+        color: #fff;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.3rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+        z-index: 9999;
+        transition: transform 0.18s, background 0.2s;
+        animation: whatsapp-float-bounce 2s infinite alternate;
+      }
+      .whatsapp-float:hover {
+        background: #128c7e;
+        color: #fff;
+        text-decoration: none;
+        transform: scale(1.12);
+      }
+      @keyframes whatsapp-float-bounce {
+        0% {
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+        }
+        100% {
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+        }
+      }
+      footer .social-icons {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        margin-top: 10px;
+        justify-content: flex-end;
+      }
+      footer .social-icons a {
+        color: #fff;
+        font-size: 1.5rem;
+        transition: color 0.2s;
+      }
+      footer .social-icons a:hover {
+        color: #facc15;
+      }
+      @media (max-width: 600px) {
+        .whatsapp-float {
+          width: 44px;
+          height: 44px;
+          font-size: 1.5rem;
+          bottom: 14px;
+          right: 14px;
+        }
+        footer .social-icons {
+          justify-content: center;
+          margin-top: 8px;
+        }
+      }
+
+      .doctor-info-section {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .specialties {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .specialty-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: var(--white);
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .specialty-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .specialty-item i {
+        font-size: 1.5rem;
+        color: var(--secondary-color);
+      }
+
+      .specialty-item span {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--primary-color);
+      }
+
+      .contact-buttons .btn {
+        padding: 0.8rem 1.5rem;
+        font-weight: 500;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .contact-buttons .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .doctor-image {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .doctor-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        .doctor-info-section {
+          padding: 3rem 0;
+        }
+
+        .specialty-item {
+          padding: 0.8rem;
+        }
+
+        .specialty-item i {
+          font-size: 1.2rem;
+        }
+
+        .specialty-item span {
+          font-size: 1rem;
+        }
+
+        .contact-buttons .btn {
+          padding: 0.7rem 1.2rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Rhinoplasty Types Section */
+      .rhinoplasty-types-section {
+        background: linear-gradient(135deg, #f9fafb 70%, #f6e9c6 100%);
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .section-title {
+        position: relative;
+      }
+      .section-underline {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+        width: 70px;
+        height: 5px;
+        background: linear-gradient(90deg, #facc15 60%, #fff0 100%);
+        border-radius: 6px;
+        animation: underline-move 2s infinite alternate;
+      }
+      @keyframes underline-move {
+        0% {
+          width: 70px;
+        }
+        100% {
+          width: 110px;
+        }
+      }
+      .rhinoplasty-card {
+        border: 2px solid #facc15;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.97);
+        transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+        box-shadow: 0 2px 12px rgba(34, 44, 77, 0.04);
+        min-height: 180px;
+        position: relative;
+      }
+      .rhinoplasty-card:hover {
+        box-shadow: 0 12px 32px rgba(34, 44, 77, 0.13);
+        transform: translateY(-10px) scale(1.04);
+        border-color: #3b82f6;
+        background: linear-gradient(120deg, #f9fafb 80%, #facc15 120%);
+      }
+      .rhino-icon {
+        font-size: 2.2rem;
+        color: #facc15;
+        margin-bottom: 0.5rem;
+      }
+      @media (max-width: 768px) {
+        .section-title {
+          font-size: 2rem;
+        }
+        .rhinoplasty-card {
+          min-height: 140px;
+        }
+      }
+
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .social-icon:hover {
+        background: #facc15;
+        color: #1a3c5e;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .footer-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+      }
+
+      .footer-link:hover {
+        color: #facc15;
+        opacity: 1;
+      }
+
+      .footer-brand img {
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .footer-brand img:hover {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .social-icon {
+          width: 35px;
+          height: 35px;
+          font-size: 1rem;
+        }
+
+        .footer-brand {
+          margin-bottom: 1rem;
+        }
+      }
+
+      /* Floating WhatsApp Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: linear-gradient(45deg, #25d366 0%, #128c7e 100%);
+        color: #fff;
+        border-radius: 50px;
+        padding: 15px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        animation: whatsapp-pulse 2s infinite;
+      }
+
+      .whatsapp-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .whatsapp-text {
+        font-size: 1rem;
+        font-weight: 500;
+        opacity: 0;
+        width: 0;
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-float:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .whatsapp-float:hover .whatsapp-text {
+        opacity: 1;
+        width: auto;
+        margin-left: 5px;
+      }
+
+      @keyframes whatsapp-pulse {
+        0% {
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        50% {
+          box-shadow: 0 4px 25px rgba(37, 211, 102, 0.4);
+        }
+        100% {
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .whatsapp-float {
+          bottom: 20px;
+          right: 20px;
+          padding: 12px 20px;
+        }
+
+        .whatsapp-text {
+          display: none;
+        }
+      }
+
+      .clickable-address {
+        transition: background 0.3s, box-shadow 0.3s;
+      }
+      .clickable-address:hover {
+        background: #eaf4fd;
+        box-shadow: 0 4px 18px rgba(59, 130, 246, 0.1);
+      }
+      .clickable-address:hover .address-icon {
+        color: #1a3c5e;
+      }
+      .clickable-address:hover .address-text {
+        color: #3b82f6;
+        text-decoration: underline;
+      }
+
+      /* Custom style for intl-tel-input inside the contact form */
+      .contact-form-box .iti {
+        width: 100%;
+      }
+      .contact-form-box .iti--allow-dropdown {
+        width: 100%;
+      }
+      .contact-form-box .iti__flag-container {
+        border-radius: 10px 0 0 10px;
+        background: #fff;
+        border: none;
+        height: 48px;
+        display: flex;
+        align-items: center;
+      }
+      .contact-form-box input#simplePhone {
+        border-radius: 10px;
+        border: none;
+        background: #fff;
+        color: #222;
+        font-size: 1.08rem;
+        padding: 12px 16px;
+        width: 100%;
+        margin-bottom: 18px;
+      }
+      .contact-form-box .iti__selected-flag {
+        border-radius: 10px 0 0 10px;
+        background: #fff;
+        border: none;
+        height: 48px;
+        display: flex;
+        align-items: center;
+      }
+      @media (max-width: 500px) {
+        .contact-form-box input#simplePhone {
+          font-size: 0.97rem;
+          padding-left: 48px;
+          height: 42px;
+        }
+        .contact-form-box .iti__flag-container,
+        .contact-form-box .iti__selected-flag {
+          height: 42px;
+        }
+      }
+      /* Enhance intl-tel-input dropdown text visibility */
+      .contact-form-box .iti__country-list {
+        color: #222;
+        background: #fff;
+        font-size: 1.08rem;
+      }
+      .contact-form-box .iti__country-list .iti__country {
+        color: #222;
+        background: #fff;
+        font-weight: 500;
+      }
+      .contact-form-box .iti__country-list .iti__country.iti__highlight {
+        background: #facc15 !important;
+        color: #1a3c5e !important;
+        font-weight: bold;
+      }
+      .contact-form-box .iti__country-list .iti__country .iti__country-name {
+        color: #222;
+      }
+      .contact-form-box .iti__country-list .iti__country .iti__dial-code {
+        color: #444;
+      }
+
+      /* Fix alignment of intl-tel-input flag and phone number */
+      .contact-form-box .iti {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+      .contact-form-box .iti__flag-container {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px 0 0 10px;
+        background: #fff;
+        border: none;
+        margin-right: 0;
+      }
+      .contact-form-box input#simplePhone {
+        height: 48px;
+        line-height: 48px;
+        padding-left: 52px !important;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        border: none;
+        background: #fff;
+        color: #222;
+        font-size: 1.08rem;
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+      }
+      .contact-form-box .iti__selected-flag {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px 0 0 10px;
+        background: #fff;
+        border: none;
+      }
+      @media (max-width: 500px) {
+        .contact-form-box .iti__flag-container,
+        .contact-form-box .iti__selected-flag,
+        .contact-form-box input#simplePhone {
+          height: 42px;
+          line-height: 42px;
+        }
+        .contact-form-box input#simplePhone {
+          padding-left: 48px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Notification Banner -->
+    <div class="notification-banner">
+      <div class="notification-content">
+        <div class="notification-message">
+          <i class="fas fa-magic"></i>
+          <span
+            >✨ Discover Your Natural Beauty with OP DR AHMEt TOSUN RHINOPLASTY SURGEON - 10 Years of
+            Excellence in Cosmetic Surgery ✨</span
+          >
+        </div>
+        <div class="notification-message">
+          <i class="fas fa-heartbeat"></i>
+          <span
+            >💝 Rediscover Your Confidence - Natural Results Tailored to Your
+            Unique Features 💝</span
+          >
+        </div>
+        <div class="notification-message">
+          <i class="fas fa-star"></i>
+          <span
+            >⭐ Experience Premium Care in Istanbul - 5-Star Accommodation & VIP
+            Services Included ⭐</span
+          >
+        </div>
+        <div class="notification-message">
+          <i class="fas fa-award"></i>
+          <span
+            >🏆 Free Consultation with OP DR AHMEt TOSUN RHINOPLASTY SURGEON - Your First Step Towards
+            a New You 🏆</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="direction: rtl;">
+      <div class="container">
+        <!-- اللوجو على اليمين -->
+        <a class="navbar-brand ms-auto" href="#">
+          <img
+            src="images/logo.jpg"
+            alt="OP DR AHMEt TOSUN RHINOPLASTY SURGEON Logo"
+            class="brand-logo"
+          />
+          <div class="brand-content">
+            <span class="logo-text">OP DR AHMEt TOSUN RHINOPLASTY SURGEON</span>
+            <span class="logo-subtext">Rhinoplasty Expert</span>
+          </div>
+        </a>
+    
+        <!-- زر الموبايل -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- اللينكات على الشمال -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#results">Results</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#procedure">Procedure</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link contact-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="home">
+      <video autoplay muted loop class="hero-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+        <!-- <source src="images/video.mp4" type="video/mp4"> -->
+      </video>
+      <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)); z-index: 1;"></div>
+      <div class="container" style="position: relative; z-index: 2; padding: 5rem 0;">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1 class="main-title" style="font-family: 'Cinzel', serif; font-size: 4.5rem; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 1.5rem; text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);">
+                Redefine Your<br />
+                Confidence with<br />
+                <span class="highlight" style="color: #c2a465;">DR AHMET TOSUN</span>
+              </h1>
+              <p class="hero-subtitle" style="font-family: 'Lora', serif; font-size: 1.4rem; color: #d8d8d8; line-height: 1.8; margin-bottom: 2.5rem; max-width: 520px;">
+                Internationally renowned rhinoplasty surgeon with 15+ years of crafting natural, breathtaking results.
+              </p>
+              <div class="feature-cards" style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 3rem;">
+                <div class="feature-card" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); padding: 1rem 2rem; border-radius: 20px; border: 1px solid rgba(194, 164, 101, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
+                  <i class="fas fa-certificate" style="font-size: 2rem; color: #c2a465; margin-right: 0.7rem;"></i>
+                  <span style="font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 600; color: #fff;">Board Certified</span>
+                </div>
+                <div class="feature-card" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); padding: 1rem 2rem; border-radius: 20px; border: 1px solid rgba(194, 164, 101, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
+                  <i class="fas fa-star" style="font-size: 2rem; color: #c2a465; margin-right: 0.7rem;"></i>
+                  <span style="font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 600; color: #fff;">Expert Care</span>
+                </div>
+                <div class="feature-card" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); padding: 1rem 2rem; border-radius: 20px; border: 1px solid rgba(194, 164, 101, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
+                  <i class="fas fa-heart" style="font-size: 2rem; color: #c2a465; margin-right: 0.7rem;"></i>
+                  <span style="font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 600; color: #fff;">Natural Results</span>
+                </div>
+              </div>
+              <div class="hero-cta" style="display: flex; gap: 1.8rem; flex-wrap: wrap;">
+                <a href="tel:+905333931692" class="hero-btn phone-btn" style="background: linear-gradient(135deg, #c2a465, #a68b3e); color: #fff; border-radius: 50px; font-family: 'Lora', serif; font-weight: 700; font-size: 1.3rem; padding: 1rem 3rem; display: inline-flex; align-items: center; gap: 0.7rem; border: none; text-decoration: none; box-shadow: 0 6px 20px rgba(194, 164, 101, 0.5); transition: transform 0.4s, box-shadow 0.4s;">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>+90 533 393 16 92</span>
+                </a>
+                <a href="https://wa.me/905333931692" target="_blank" class="hero-btn consultation-btn" style="background: transparent; color: #c2a465; border: 2px solid #c2a465; border-radius: 50px; font-family: 'Lora', serif; font-weight: 700; font-size: 1.3rem; padding: 1rem 3rem; display: inline-flex; align-items: center; gap: 0.7rem; text-decoration: none; transition: background 0.4s, color 0.4s, box-shadow 0.4s;">
+                  Free Consultation <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-slider">
+              <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="hero-image" style="position: relative; overflow: hidden; border-radius: 30px; border: 2px solid #c2a465; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);">
+                      <img src="images/14.jpg" alt="Dr Ahmet Tosun Rhinoplasty Surgeon" loading="lazy" style="width: 100%; height: 550px; object-fit: cover;">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="hero-image" style="position: relative; overflow: hidden; border-radius: 30px; border: 2px solid #c2a465; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);">
+                      <img src="images/9.jpg" alt="Dr Ahmet Tosun Clinic" loading="lazy" style="width: 100%; height: 550px; object-fit: cover;">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination" style="bottom: 40px;"></div>
+                <div class="experience-badge" style="position: absolute; top: 30px; right: 30px; background: linear-gradient(135deg, #c2a465, #a68b3e); color: #fff; width: 140px; height: 140px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(194, 164, 101, 0.6); animation: pulse 2s infinite;">
+                  <span class="number" style="font-family: 'Cinzel', serif; font-size: 2.5rem; font-weight: 700;">15+</span>
+                  <span class="text" style="font-family: 'Lora', serif; font-size: 1rem; font-weight: 600;">Years Experience</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <canvas id="three-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.2;"></canvas>
+      <style>
+        .hero-section {
+          position: relative;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+        }
+        .feature-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 25px rgba(194, 164, 101, 0.4);
+        }
+        .hero-btn:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 8px 25px rgba(194, 164, 101, 0.6);
+        }
+        .consultation-btn:hover {
+          background: #c2a465;
+          color: #fff;
+        }
+        @keyframes pulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+          100% { transform: scale(1); }
+        }
+        @media (max-width: 991px) {
+          .hero-section {
+            min-height: auto;
+            padding: 3rem 0;
+          }
+          .main-title {
+            font-size: 3.2rem;
+          }
+          .hero-subtitle {
+            font-size: 1.2rem;
+          }
+          .hero-cta {
+            flex-direction: column;
+            align-items: stretch;
+          }
+          .hero-btn {
+            justify-content: center;
+          }
+          .hero-image img {
+            height: 450px;
+          }
+        }
+        @media (max-width: 576px) {
+          .main-title {
+            font-size: 2.5rem;
+          }
+          .hero-subtitle {
+            font-size: 1rem;
+          }
+          .feature-card {
+            padding: 0.8rem 1.5rem;
+          }
+          .hero-image img {
+            height: 350px;
+          }
+          .experience-badge {
+            width: 110px;
+            height: 110px;
+          }
+          .number {
+            font-size: 2rem;
+          }
+          .text {
+            font-size: 0.9rem;
+          }
+        }
+      </style>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // Swiper Slider
+          const swiper = new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: {
+              delay: 3500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            effect: 'fade',
+            fadeEffect: {
+              crossFade: true,
+            },
+          });
+    
+          // GSAP Animations
+          gsap.registerPlugin(ScrollTrigger);
+          gsap.from('.main-title', {
+            opacity: 0,
+            y: 60,
+            duration: 1.5,
+            ease: 'power4.out',
+            scrollTrigger: { trigger: '.hero-section', start: 'top 80%' }
+          });
+          gsap.from('.hero-subtitle', {
+            opacity: 0,
+            y: 60,
+            duration: 1.5,
+            delay: 0.4,
+            ease: 'power4.out',
+            scrollTrigger: { trigger: '.hero-section', start: 'top 80%' }
+          });
+          gsap.from('.feature-card', {
+            opacity: 0,
+            y: 40,
+            duration: 1.2,
+            stagger: 0.3,
+            ease: 'power4.out',
+            scrollTrigger: { trigger: '.hero-section', start: 'top 80%' }
+          });
+          gsap.from('.hero-btn', {
+            opacity: 0,
+            y: 40,
+            duration: 1.2,
+            stagger: 0.3,
+            ease: 'power4.out',
+            scrollTrigger: { trigger: '.hero-section', start: 'top 80%' }
+          });
+          gsap.from('.hero-image', {
+            opacity: 0,
+            x: 60,
+            duration: 1.5,
+            ease: 'power4.out',
+            scrollTrigger: { trigger: '.hero-section', start: 'top 80%' }
+          });
+          gsap.from('.experience-badge', {
+            opacity: 0,
+            scale: 0.7,
+            duration: 1.5,
+            ease: 'elastic.out(1, 0.3)',
+            scrollTrigger: { trigger: '.hero-section', start: 'top 80%' }
+          });
+    
+          // Three.js Background Effect
+          const scene = new THREE.Scene();
+          const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+          const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('three-canvas'), alpha: true });
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          camera.position.z = 5;
+    
+          const geometry = new THREE.SphereGeometry(0.1, 32, 32);
+          const material = new THREE.MeshBasicMaterial({ color: 0xc2a465 });
+          const particles = [];
+          for (let i = 0; i < 100; i++) {
+            const particle = new THREE.Mesh(geometry, material);
+            particle.position.set(
+              (Math.random() - 0.5) * 10,
+              (Math.random() - 0.5) * 10,
+              (Math.random() - 0.5) * 10
+            );
+            scene.add(particle);
+            particles.push(particle);
+          }
+    
+          function animate() {
+            requestAnimationFrame(animate);
+            particles.forEach(p => {
+              p.position.y += 0.01;
+              if (p.position.y > 5) p.position.y = -5;
+            });
+            renderer.render(scene, camera);
+          }
+          animate();
+    
+          window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+          });
+        });
+      </script>
+    </header>
+
+    <!-- Contact Section (Responsive & Clean) -->
+    <section class="contact-section" id="contact">
+      <div class="contact-flex">
+        <div
+          class="contact-form-box"
+          style="
+            background: #19224a;
+            border-radius: 60px 0 60px 60px;
+            color: #fff;
+            max-width: 410px;
+            min-width: 310px;
+            margin-left: 0;
+            margin-right: 24px;
+            box-shadow: 0 8px 32px rgba(25, 34, 74, 0.18);
+            padding: 38px 32px 32px 32px;
+            position: relative;
+          "
+        >
+          <div
+            id="formProgressBar"
+            style="
+              height: 8px;
+              background: #e5e1dc;
+              border-radius: 8px;
+              margin-bottom: 22px;
+              overflow: hidden;
+            "
+          >
+            <div
+              id="formProgress"
+              style="
+                height: 100%;
+                width: 0%;
+                background: linear-gradient(90deg, #facc15 60%, #fff0 100%);
+                transition: width 0.4s;
+              "
+            ></div>
+          </div>
+          <h2
+            style="
+              font-size: 2rem;
+              font-weight: bold;
+              margin-bottom: 10px;
+              text-align: center;
+              line-height: 1.2;
+            "
+          >
+            Leave us your contact details &<br />Our team will get back to you
+            shortly!
+          </h2>
+          <div
+            style="
+              text-align: center;
+              margin: 18px 0 10px 0;
+              font-size: 1.1rem;
+              color: #fff;
+              opacity: 0.92;
+            "
+          >
+            Select your nose type
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 18px;
+              margin-bottom: 18px;
+            "
+          >
+            <span
+              style="
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 8px #0001;
+                font-size: 1.5rem;
+                color: #1a3c5e;
+                border: 3px solid #fff;
+              "
+              ><i class="fas fa-user-md"></i
+            ></span>
+            <span
+              style="
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 8px #0001;
+                font-size: 1.5rem;
+                color: #e63946;
+              "
+              ><i class="fas fa-heart"></i
+            ></span>
+            <span
+              style="
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 8px #0001;
+                font-size: 1.5rem;
+                color: #3b82f6;
+              "
+              ><i class="fas fa-hospital"></i
+            ></span>
+            <span
+              style="
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 8px #0001;
+                font-size: 1.5rem;
+                color: #facc15;
+              "
+              ><i class="fas fa-comments"></i
+            ></span>
+            <span
+              style="
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 8px #0001;
+                font-size: 1.5rem;
+                color: #ff9800;
+              "
+              ><i class="fas fa-star"></i
+            ></span>
+          </div>
+          <form action="https://formsubmit.co/Info@nileistanbulmedical.com" method="POST" id="contactForm">
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name*"
+              required
+              style="width: 100%; padding: 12px 16px; border-radius: 10px; border: none; margin-bottom: 12px; font-size: 1.08rem; background: #fff; color: #222;"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail*"
+              required
+              style="width: 100%; padding: 12px 16px; border-radius: 10px; border: none; margin-bottom: 12px; font-size: 1.08rem; background: #fff; color: #222;"
+            />
+            <div style="display: flex; gap: 10px; margin-bottom: 18px;">
+              <select
+                name="country_code"
+                id="countryCode"
+                required
+                style="width: 30%; padding: 12px 8px; border-radius: 10px; border: none; font-size: 1.08rem; background: #fff; color: #222;"
+              >
+                <option value="">Select Code</option>
+                <!-- European Countries -->
+                <option value="+355">+355 (Albania)</option>
+                <option value="+376">+376 (Andorra)</option>
+                <option value="+374">+374 (Armenia)</option>
+                <option value="+43">+43 (Austria)</option>
+                <option value="+994">+994 (Azerbaijan)</option>
+                <option value="+375">+375 (Belarus)</option>
+                <option value="+32">+32 (Belgium)</option>
+                <option value="+387">+387 (Bosnia and Herzegovina)</option>
+                <option value="+359">+359 (Bulgaria)</option>
+                <option value="+385">+385 (Croatia)</option>
+                <option value="+357">+357 (Cyprus)</option>
+                <option value="+420">+420 (Czech Republic)</option>
+                <option value="+45">+45 (Denmark)</option>
+                <option value="+372">+372 (Estonia)</option>
+                <option value="+358">+358 (Finland)</option>
+                <option value="+33">+33 (France)</option>
+                <option value="+995">+995 (Georgia)</option>
+                <option value="+49">+49 (Germany)</option>
+                <option value="+30">+30 (Greece)</option>
+                <option value="+36">+36 (Hungary)</option>
+                <option value="+354">+354 (Iceland)</option>
+                <option value="+353">+353 (Ireland)</option>
+                <option value="+39">+39 (Italy)</option>
+                <option value="+383">+383 (Kosovo)</option>
+                <option value="+371">+371 (Latvia)</option>
+                <option value="+423">+423 (Liechtenstein)</option>
+                <option value="+370">+370 (Lithuania)</option>
+                <option value="+352">+352 (Luxembourg)</option>
+                <option value="+356">+356 (Malta)</option>
+                <option value="+373">+373 (Moldova)</option>
+                <option value="+377">+377 (Monaco)</option>
+                <option value="+382">+382 (Montenegro)</option>
+                <option value="+31">+31 (Netherlands)</option>
+                <option value="+389">+389 (North Macedonia)</option>
+                <option value="+47">+47 (Norway)</option>
+                <option value="+48">+48 (Poland)</option>
+                <option value="+351">+351 (Portugal)</option>
+                <option value="+40">+40 (Romania)</option>
+                <option value="+7">+7 (Russia)</option>
+                <option value="+378">+378 (San Marino)</option>
+                <option value="+381">+381 (Serbia)</option>
+                <option value="+421">+421 (Slovakia)</option>
+                <option value="+386">+386 (Slovenia)</option>
+                <option value="+34">+34 (Spain)</option>
+                <option value="+46">+46 (Sweden)</option>
+                <option value="+41">+41 (Switzerland)</option>
+                <option value="+90">+90 (Turkey)</option>
+                <option value="+380">+380 (Ukraine)</option>
+                <option value="+44">+44 (United Kingdom)</option>
+                <option value="+379">+379 (Vatican City)</option>
+                <!-- Other Countries (Africa, Asia, Americas, Oceania) -->
+                <option value="+213">+213 (Algeria)</option>
+                <option value="+244">+244 (Angola)</option>
+                <option value="+54">+54 (Argentina)</option>
+                <option value="+61">+61 (Australia)</option>
+                <option value="+973">+973 (Bahrain)</option>
+                <option value="+880">+880 (Bangladesh)</option>
+                <option value="+55">+55 (Brazil)</option>
+                <option value="+1">+1 (Canada)</option>
+                <option value="+56">+56 (Chile)</option>
+                <option value="+86">+86 (China)</option>
+                <option value="+57">+57 (Colombia)</option>
+                <option value="+269">+269 (Comoros)</option>
+                <option value="+243">+243 (DR Congo)</option>
+                <option value="+20">+20 (Egypt)</option>
+                <option value="+251">+251 (Ethiopia)</option>
+                <option value="+679">+679 (Fiji)</option>
+                <option value="+241">+241 (Gabon)</option>
+                <option value="+220">+220 (Gambia)</option>
+                <option value="+233">+233 (Ghana)</option>
+                <option value="+852">+852 (Hong Kong)</option>
+                <option value="+91">+91 (India)</option>
+                <option value="+62">+62 (Indonesia)</option>
+                <option value="+98">+98 (Iran)</option>
+                <option value="+964">+964 (Iraq)</option>
+                <option value="+81">+81 (Japan)</option>
+                <option value="+962">+962 (Jordan)</option>
+                <option value="+254">+254 (Kenya)</option>
+                <option value="+965">+965 (Kuwait)</option>
+                <option value="+961">+961 (Lebanon)</option>
+                <option value="+60">+60 (Malaysia)</option>
+                <option value="+960">+960 (Maldives)</option>
+                <option value="+52">+52 (Mexico)</option>
+                <option value="+212">+212 (Morocco)</option>
+                <option value="+95">+95 (Myanmar)</option>
+                <option value="+977">+977 (Nepal)</option>
+                <option value="+64">+64 (New Zealand)</option>
+                <option value="+234">+234 (Nigeria)</option>
+                <option value="+968">+968 (Oman)</option>
+                <option value="+92">+92 (Pakistan)</option>
+                <option value="+51">+51 (Peru)</option>
+                <option value="+63">+63 (Philippines)</option>
+                <option value="+974">+974 (Qatar)</option>
+                <option value="+966">+966 (Saudi Arabia)</option>
+                <option value="+65">+65 (Singapore)</option>
+                <option value="+27">+27 (South Africa)</option>
+                <option value="+82">+82 (South Korea)</option>
+                <option value="+94">+94 (Sri Lanka)</option>
+                <option value="+249">+249 (Sudan)</option>
+                <option value="+886">+886 (Taiwan)</option>
+                <option value="+66">+66 (Thailand)</option>
+                <option value="+216">+216 (Tunisia)</option>
+                <option value="+971">+971 (United Arab Emirates)</option>
+                <option value="+1">+1 (United States)</option>
+                <option value="+84">+84 (Vietnam)</option>
+                <option value="+967">+967 (Yemen)</option>
+              </select>
+              <input
+                type="tel"
+                name="phone_input"
+                id="phoneInput"
+                placeholder="Phone Number*"
+                required
+                style="width: 70%; padding: 12px 16px; border-radius: 10px; border: none; font-size: 1.08rem; background: #fff; color: #222;"
+              />
+              <input type="hidden" name="phone" id="fullPhone">
+            </div>
+            <button
+              type="submit"
+              style="
+                width: 100%;
+                background: #e5e1dc;
+                color: #222;
+                border: none;
+                border-radius: 20px;
+                padding: 12px;
+                font-size: 1.15rem;
+                font-weight: 600;
+                margin-top: 8px;
+                transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+              "
+            >
+              Submit
+            </button>
+            <button
+              type="submit"
+              style="
+                width: 100%;
+                background: #d4cfc9;
+                color: #1a3c5e;
+                border: none;
+                border-radius: 20px;
+                padding: 12px;
+                font-size: 1.15rem;
+                font-weight: 600;
+                margin-top: 8px;
+                transform: scale(1.05);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                display: none;
+              "
+            >
+              Submit
+            </button>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://nileistanbulmedical.com/thanks.html">
+          </form>
+        </div>
+        <div class="contact-info-box">
+          <h3 style="font-size: 1.2rem; font-weight: bold; margin-bottom: 12px">
+            OUR ALL-INCLUSIVE RHINOPLASTY PACKAGE
+          </h3>
+          <p style="color: #555; font-size: 0.95rem; margin-bottom: 18px">
+            Our all-inclusive rhinoplasty package is designed to ensure your
+            comfort, safety and complete satisfaction!
+          </p>
+          <div class="package-item">
+            *Free Consultation & Treatment Planning
+          </div>
+          <div class="package-item">*5-Star Accommodation</div>
+          <div class="package-item">*Transfers (Airport-Hotel-Clinic)</div>
+          <div class="package-item">*Postoperative Care</div>
+          <div class="package-item">*Professional Interpreter</div>
+          <a
+            href="https://wa.me/905333931692"
+            target="_blank"
+            class="get-started-btn"
+            style="
+              background: #1a3c5e;
+              color: #fff;
+              border-radius: 30px;
+              font-weight: 600;
+              font-size: 1.2rem;
+              padding: 0.7rem 2rem;
+              width: 100%;
+              border: none;
+              margin-top: 18px;
+              display: inline-block;
+              text-align: center;
+            "
+            >Get Started Today!</a
+          >
+        </div>
+      </div>
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+          e.preventDefault(); // Prevent default submission to handle phone number
+          const countryCode = document.getElementById('countryCode').value;
+          const phoneInput = document.getElementById('phoneInput').value;
+          const fullPhone = document.getElementById('fullPhone');
+          
+          // Combine country code and phone number
+          if (countryCode && phoneInput) {
+            fullPhone.value = `${countryCode}${phoneInput}`;
+            // Proceed with form submission
+            this.submit();
+          } else {
+            alert('Please select a country code and enter a phone number.');
+          }
+        });
+      </script>
+    </section>
+    
+    
+    
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="about-content">
+              <h2 class="section-title">About Our Expertise</h2>
+              <p class="lead">
+                Transform Your Confidence with Expert Rhinoplasty Care
+              </p>
+              <p class="description">
+                At our prestigious clinic, we combine artistic vision with
+                surgical precision to create naturally beautiful results. Our
+                board-certified surgeons bring years of specialized experience
+                in rhinoplasty procedures, ensuring each patient receives
+                personalized care tailored to their unique features.
+              </p>
+              <div class="stats-container">
+                <div class="stat-item">
+                  <span class="stat-number">10+</span>
+                  <span class="stat-text">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">100+</span>
+                  <span class="stat-text">Successful Surgeries</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">99.9%</span>
+                  <span class="stat-text">Patient Satisfaction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="expertise-cards">
+              <div class="expertise-card">
+                <i class="fas fa-user-md"></i>
+                <h3>Expert Surgeons</h3>
+                <p>
+                  Board-certified specialists with extensive rhinoplasty
+                  experience
+                </p>
+              </div>
+              <div class="expertise-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Safety First</h3>
+                <p>
+                  State-of-the-art facilities with the highest safety standards
+                </p>
+              </div>
+              <div class="expertise-card">
+                <i class="fas fa-heart"></i>
+                <h3>Natural Results</h3>
+                <p>Customized approaches for beautiful, harmonious outcomes</p>
+              </div>
+              <div class="expertise-card">
+                <i class="fas fa-comments"></i>
+                <h3>Personal Care</h3>
+                <p>Dedicated support throughout your transformation journey</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation Packages Section -->
+    <section
+      class="consultation-packages py-5"
+      style="background-color: var(--light-bg)"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center mb-5">
+            <h2
+              class="section-title text-center"
+              style="display: inline-block; margin-bottom: 2rem"
+            >
+              Our Consultation Process
+            </h2>
+            <p class="section-description text-center mb-5">
+              Begin your transformation journey with our expert guidance
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <!-- Free Consultation Card -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="package-card h-100"
+              style="
+                background: var(--white);
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+              "
+            >
+              <div
+                class="card-header text-center p-4"
+                style="background: var(--primary-color); color: var(--white)"
+              >
+                <h3 class="mb-0">Free Consultation</h3>
+                <p class="mb-0">Schedule your free consultation</p>
+              </div>
+              <div class="card-body p-4">
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <i
+                      class="fas fa-check-circle me-2"
+                      style="color: var(--secondary-color)"
+                    ></i>
+                    Initial assessment of your needs
+                  </li>
+                  <li class="mb-3">
+                    <i
+                      class="fas fa-check-circle me-2"
+                      style="color: var(--secondary-color)"
+                    ></i>
+                    Discussion of your goals
+                  </li>
+                  <li class="mb-3">
+                    <i
+                      class="fas fa-check-circle me-2"
+                      style="color: var(--secondary-color)"
+                    ></i>
+                    Basic treatment recommendations
+                  </li>
+                </ul>
+                <div class="text-center mt-4">
+                  <a
+                    href="https://wa.me/905333931692"
+                    target="_blank"
+                    class="btn btn-outline-primary rounded-pill px-4 py-2"
+                    >Schedule Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package Deals Card -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="package-card h-100"
+              style="
+                background: var(--white);
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+              "
+            >
+              <div
+                class="card-header text-center p-4"
+                style="background: var(--secondary-color); color: var(--white)"
+              >
+                <h3 class="mb-0">Package Deals</h3>
+                <p class="mb-0">Learn more about our packages</p>
+              </div>
+              <div class="card-body p-4">
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <i
+                      class="fas fa-check-circle me-2"
+                      style="color: var(--secondary-color)"
+                    ></i>
+                    Comprehensive treatment packages
+                  </li>
+                  <li class="mb-3">
+                    <i
+                      class="fas fa-check-circle me-2"
+                      style="color: var(--secondary-color)"
+                    ></i>
+                    Customized payment plans
+                  </li>
+                  <li class="mb-3">
+                    <i
+                      class="fas fa-check-circle me-2"
+                      style="color: var(--secondary-color)"
+                    ></i>
+                    Special offers and discounts
+                  </li>
+                </ul>
+                <div class="text-center mt-4">
+                  <a
+                    href="#contact"
+                    class="btn btn-outline-primary rounded-pill px-4 py-2"
+                    >View Packages</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Treatment Plan Card -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="package-card h-100"
+              style="
+                background: var(--white);
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+              "
+            >
+              <div
+                class="card-header text-center p-4"
+                style="
+                  background: var(--accent-color);
+                  color: var(--primary-color);
+                "
+              >
+                <h3 class="mb-0">Treatment Plan</h3>
+                <p class="mb-0">Get your personalized plan</p>
+              </div>
+              <div class="card-body p-4">
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <i
+                      class="fas fa-check-circle me-2"
+                      style="color: var(--secondary-color)"
+                    ></i>
+                    Detailed treatment timeline
+                  </li>
+                  <li class="mb-3">
+                    <i
+                      class="fas fa-check-circle me-2"
+                      style="color: var(--secondary-color)"
+                    ></i>
+                    Recovery guidelines
+                  </li>
+                  <li class="mb-3">
+                    <i
+                      class="fas fa-check-circle me-2"
+                      style="color: var(--secondary-color)"
+                    ></i>
+                    Post-treatment care plan
+                  </li>
+                </ul>
+                <div class="text-center mt-4">
+                  <a
+                    href="#contact"
+                    class="btn btn-outline-primary rounded-pill px-4 py-2"
+                    >Get Plan</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .package-card:hover {
+          transform: translateY(-10px);
+        }
+        .package-card .btn-outline-primary {
+          border-color: var(--secondary-color);
+          color: var(--secondary-color);
+        }
+        .package-card .btn-outline-primary:hover {
+          background-color: var(--secondary-color);
+          color: var(--white);
+        }
+      </style>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section py-5" style="margin-top: 5rem" id="results">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2>Real Results, Real Transformations</h2>
+          <p style="color: var(--secondary-color); font-size: 1.2rem">
+            Before & After Gallery
+          </p>
+          <p class="mx-auto" style="max-width: 800px">
+            Discover the amazing transformations we've achieved for our
+            patients. Each result showcases our commitment to natural beauty and
+            precision.
+          </p>
+        </div>
+
+        <style>
+          .before-after-img {
+            height: 300px;
+            width: 50%;
+            object-fit: cover;
+          }
+
+          .card-custom {
+            background-color: #f8f9fa;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+          }
+
+          .card-custom .d-flex {
+            height: 300px;
+          }
+        </style>
+
+        <div
+          id="beforeAfterCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          style="margin-top: 60px"
+        >
+          <div class="carousel-inner text-center">
+            <!-- Card 1 -->
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <div class="card card-custom w-100 mx-3">
+                  <div class="d-flex">
+                    <img
+                      src="images/1.jpg"
+                      class="before-after-img"
+                      alt="Before"
+                    />
+                    <img
+                      src="images/2.jpg"
+                      class="before-after-img"
+                      alt="After"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="card card-custom w-100 mx-3">
+                  <div class="d-flex">
+                    <img
+                      src="images/17.jpg"
+                      class="before-after-img"
+                      alt="Before"
+                    />
+                    <img
+                      src="images/16.jpg"
+                      class="before-after-img"
+                      alt="After"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="card card-custom w-100 mx-3">
+                  <div class="d-flex">
+                    <img
+                      src="images/6.jpg"
+                      class="before-after-img"
+                      alt="Before"
+                    />
+                    <img
+                      src="images/7.jpg"
+                      class="before-after-img"
+                      alt="After"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="card card-custom w-100 mx-3">
+                  <div class="d-flex">
+                    <img
+                      src="images/4.jpg"
+                      class="before-after-img"
+                      alt="Before"
+                    />
+                    <img
+                      src="images/3.jpg"
+                      class="before-after-img"
+                      alt="After"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="card card-custom w-100 mx-3">
+                  <div class="d-flex">
+                    <img
+                      src="images/20.jpg"
+                      class="before-after-img"
+                      alt="Before"
+                    />
+                    <img
+                      src="images/21.jpg"
+                      class="before-after-img"
+                      alt="After"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Brownie points for adding a bit of humor to the code! 😄 --> -->
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="card card-custom w-100 mx-3">
+                  <div class="d-flex">
+                    <img
+                      src="images/5.jpg"
+                      class="before-after-img"
+                      alt="Before"
+                    />
+                    <img
+                      src="images/8.jpg"
+                      class="before-after-img"
+                      alt="After"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#beforeAfterCarousel"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon bg-dark rounded-circle p-2"
+            ></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#beforeAfterCarousel"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon bg-dark rounded-circle p-2"
+            ></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section py-5">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>What Our Patients Say</h2>
+          <p class="section-description">
+            Hear from our satisfied patients about their transformation journey
+          </p>
+        </div>
+        <div class="swiper testimonials-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <p>
+                    "I had surgery 10 days ago. Ahmet Hoca always answered my concerns and questions via WhatsApp. I am very pleased, I recommend it."
+                  </p>
+                  <h5>Esra Ç. </h5>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <p>
+                    "About two months ago, I had a nose surgery by Ahmet Hoca. Inevitably, people hesitate before having the surgery, but I say, I am glad I was born. And I am glad I had it by Ahmet Hoca. His hand is so light that I did not even have any pain. I thank him very much for his care."
+                  </p>
+                  <h5>Emine G.</h5>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <p>
+                    "When it comes to nose surgery, a specialist doctor comes to mind... I strongly recommend him to all friends who have thoughts about nose aesthetics or ENT field. He is a specialist doctor who will make you feel like one of your leading family members with his attention before and after surgery and his sensitivity to his patients 😊"
+                  </p>
+                  <h5>Leyla Ö.</h5>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section py-5 bg-light">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Frequently Asked Questions</h2>
+          <p class="section-description">
+            Find answers to common questions about rhinoplasty
+          </p>
+        </div>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq1"
+                aria-controls="faq1"
+                aria-expanded="true"
+              >
+                Is rhinoplasty painful?
+              </button>
+            </h2>
+            <div
+              id="faq1"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Most patients experience minimal discomfort, managed with
+                prescribed medication. The procedure is performed under
+                anesthesia for your comfort.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq2"
+                aria-controls="faq2"
+                aria-expanded="false"
+              >
+                How long is the recovery period?
+              </button>
+            </h2>
+            <div
+              id="faq2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Initial recovery takes 1-2 weeks, with most swelling subsiding
+                within a few months. Final results are visible after 6-12
+                months.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq3"
+                aria-controls="faq3"
+                aria-expanded="false"
+              >
+                Are the results permanent?
+              </button>
+            </h2>
+            <div
+              id="faq3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Yes, rhinoplasty results are permanent, though natural aging may
+                subtly affect appearance over time.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Online Consultation Section -->
+    <section
+      class="online-consultation-section py-5"
+      style="background: #232c4d; color: #fff"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+            <h2
+              class="consult-title mb-3"
+              style="color: #facc15; font-weight: bold"
+            >
+              Online Consultation
+            </h2>
+            <p
+              style="
+                font-size: 1.1rem;
+                max-width: 400px;
+                margin: 0 auto 1.5rem auto;
+                color: #fff;
+              "
+            >
+              Our medical team will inform you about anything you need to know!
+              We will arrange everything for you!
+            </p>
+            <div
+              class="consult-nav d-flex justify-content-center justify-content-md-start gap-3 mt-3"
+            >
+              <button
+                class="btn btn-outline-light rounded-2"
+                style="width: 44px; height: 44px"
+                id="prevBtn"
+              >
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <button
+                class="btn btn-outline-light rounded-2"
+                style="width: 44px; height: 44px"
+                id="nextBtn"
+              >
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <ol
+              class="consult-timeline"
+              style="list-style: none; padding-left: 0; margin: 0"
+            >
+              <li class="timeline-step active">
+                <span>Online Consultation</span>
+              </li>
+              <li class="timeline-step"><span>Arrival in Istanbul</span></li>
+              <li class="timeline-step">
+                <span>OP DR AHMET TOSUN RHINOPLASTY SURGEON</span>
+              </li>
+              <li class="timeline-step"><span>Rhinoplasty Procedure</span></li>
+              <li class="timeline-step"><span>Postoperative Care</span></li>
+              <li class="timeline-step"><span>Departure</span></li>
+              <li class="timeline-step">
+                <span>Say Hello to a More Beautiful You!</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <style>
+        .consult-timeline {
+          border-left: 3px solid #facc15;
+          margin-left: 2rem;
+          position: relative;
+        }
+        .consult-timeline .timeline-step {
+          position: relative;
+          padding: 0.5rem 0 0.5rem 1.5rem;
+          color: #d1d5db;
+          font-size: 1.08rem;
+        }
+        .consult-timeline .timeline-step.active {
+          color: #facc15;
+          font-weight: bold;
+        }
+        .consult-timeline .timeline-step::before {
+          content: "";
+          position: absolute;
+          left: -1.1rem;
+          top: 0.7rem;
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          background: #232c4d;
+          border: 3px solid #facc15;
+        }
+        .consult-timeline .timeline-step.active::before {
+          background: #facc15;
+        }
+      </style>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const steps = document.querySelectorAll('.timeline-step');
+          let currentStep = 0;
+
+          document.getElementById('prevBtn').addEventListener('click', function () {
+            steps[currentStep].classList.remove('active');
+            currentStep = (currentStep - 1 + steps.length) % steps.length;
+            steps[currentStep].classList.add('active');
+          });
+
+          document.getElementById('nextBtn').addEventListener('click', function () {
+            steps[currentStep].classList.remove('active');
+            currentStep = (currentStep + 1) % steps.length;
+            steps[currentStep].classList.add('active');
+          });
+        });
+      </script>
+    </section>
+
+    <!-- Rhinoplasty Types Section -->
+    <section
+      class="rhinoplasty-types-section py-5"
+      style="background: linear-gradient(135deg, #f9fafb 70%, #f6e9c6 100%)"
+    >
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2
+            class="section-title"
+            style="
+              color: #232c4d;
+              font-size: 2.7rem;
+              font-family: 'Playfair Display', serif;
+              font-weight: bold;
+              position: relative;
+              display: inline-block;
+            "
+          >
+            Different Types of Rhinoplasty Procedures
+            <span class="section-underline"></span>
+          </h2>
+        </div>
+        <div class="row justify-content-center g-4">
+          <div class="col-md-4">
+            <div class="rhinoplasty-card text-center p-4 h-100">
+              <div class="rhino-icon mb-2"><i class="fas fa-wind"></i></div>
+              <h4
+                style="
+                  color: #1a3c5e;
+                  font-weight: bold;
+                  font-family: 'Playfair Display', serif;
+                "
+              >
+                Septoplasty
+              </h4>
+              <p style="color: #444">Improves Nasal Function</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="rhinoplasty-card text-center p-4 h-100">
+              <div class="rhino-icon mb-2"><i class="fas fa-user-md"></i></div>
+              <h4
+                style="
+                  color: #1a3c5e;
+                  font-weight: bold;
+                  font-family: 'Playfair Display', serif;
+                "
+              >
+                Septorhinoplasty
+              </h4>
+              <p style="color: #444">Improves Appearance & Nasal Function</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="rhinoplasty-card text-center p-4 h-100">
+              <div class="rhino-icon mb-2">
+                <i class="fas fa-smile-beam"></i>
+              </div>
+              <h4
+                style="
+                  color: #1a3c5e;
+                  font-weight: bold;
+                  font-family: 'Playfair Display', serif;
+                "
+              >
+                Ethnic Rhinoplasty
+              </h4>
+              <p style="color: #444">Improves Appearance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .section-title {
+          position: relative;
+        }
+        .section-underline {
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: -16px;
+          width: 70px;
+          height: 5px;
+          background: linear-gradient(90deg, #facc15 60%, #fff0 100%);
+          border-radius: 6px;
+          animation: underline-move 2s infinite alternate;
+        }
+        @keyframes underline-move {
+          0% {
+            width: 70px;
+          }
+          100% {
+            width: 110px;
+          }
+        }
+        .rhinoplasty-card {
+          border: 2px solid #facc15;
+          border-radius: 28px;
+          background: rgba(255, 255, 255, 0.97);
+          transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+          box-shadow: 0 2px 12px rgba(34, 44, 77, 0.04);
+          min-height: 180px;
+          position: relative;
+        }
+        .rhinoplasty-card:hover {
+          box-shadow: 0 12px 32px rgba(34, 44, 77, 0.13);
+          transform: translateY(-10px) scale(1.04);
+          border-color: #3b82f6;
+          background: linear-gradient(120deg, #f9fafb 80%, #facc15 120%);
+        }
+        .rhino-icon {
+          font-size: 2.2rem;
+          color: #facc15;
+          margin-bottom: 0.5rem;
+        }
+        @media (max-width: 768px) {
+          .section-title {
+            font-size: 2rem;
+          }
+          .rhinoplasty-card {
+            min-height: 140px;
+          }
+        }
+      </style>
+    </section>
+
+    <!-- Doctor Information Section -->
+    <section
+      class="doctor-info-section py-5"
+      style="background: var(--light-bg)"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="doctor-profile">
+              <h2 class="section-title mb-4">OP DR AHMEt TOSUN RHINOPLASTY SURGEON</h2>
+              <div class="specialties mb-4">
+                <div class="specialty-item">
+                  <i class="fas fa-nose"></i>
+                  <span>Rinoplasti / Burun Estetiği</span>
+                </div>
+                <div class="specialty-item">
+                  <i class="fas fa-throat"></i>
+                  <span>Bademcik ve Geniz Eti Ameliyatı</span>
+                </div>
+                <div class="specialty-item">
+                  <i class="fas fa-ear"></i>
+                  <span>Kulak Tüpü Uygulaması</span>
+                </div>
+              </div>
+              <div class="contact-info">
+                <!-- New Address Rectangle -->
+                <div class="specialty-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Esentepe Mah Anadolu Cad no:5/2 Kartal/İstanbul, Istanbul, Turkey</span>
+                </div>
+                <div class="contact-buttons mt-4 text-center">
+                  <a href="tel:+905333931692" class="btn btn-primary me-2">
+                    <i class="fas fa-phone"></i> Call Now
+                  </a>
+                  <a
+                    href="mailto:Info@nileistanbulmedical.com"
+                    class="btn btn-info me-2"
+                  >
+                    <i class="fas fa-envelope"></i> Email
+                  </a>
+                  <a
+                    href="https://wa.me/905333931692"
+                    target="_blank"
+                    class="btn btn-success me-2"
+                  >
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                  </a>
+                  <a
+                    href="https://www.google.com/maps?q=Esentepe+Mah+Anadolu+Cad+no:5/2+Kartal/İstanbul,+Istanbul,+Turkey"
+                    target="_blank"
+                    class="btn btn-secondary my-2"
+                  >
+                    <i class="fas fa-map-marker-alt"></i> Location
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="doctor-image">
+              <img
+                src="images/14.jpg"
+                alt="OP DR AHMEt TOSUN RHINOPLASTY SURGEON"
+                class="img-fluid rounded shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="py-5"
+      style="
+        background: linear-gradient(135deg, #1a3c5e 0%, #2a4c6e 100%);
+        color: #fff;
+      "
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+            <div
+              class="footer-brand d-flex align-items-center justify-content-center justify-content-md-start"
+            >
+              <img
+                src="images/logo.jpg"
+                alt="OP DR AHMEt TOSUN RHINOPLASTY SURGEON Logo"
+                style="height: 50px; margin-right: 15px"
+              />
+              <div>
+                <h5 class="mb-0" style="font-family: 'Playfair Display', serif">
+                  OP DR AHMEt TOSUN RHINOPLASTY SURGEON
+                </h5>
+                <p class="mb-0" style="font-size: 0.9rem; opacity: 0.8">
+                  Rhinoplasty Expert
+                </p>
+              </div>
+            </div>
+            <p class="mt-3 mb-0" style="font-size: 0.9rem; opacity: 0.8">
+              2025 Rhinoplasty Clinic. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div
+              class="social-icons d-flex justify-content-center justify-content-md-end gap-3 mb-3"
+            >
+              <a
+                href="https://www.facebook.com/share/1C9dd17QJo/?mibextid=qi2Omg"
+                target="_blank"
+                class="social-icon"
+                title="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/ahmettosunkbb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                class="social-icon"
+                title="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/905333931692"
+                target="_blank"
+                class="social-icon"
+                title="WhatsApp"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a
+                href="mailto:Info@nileistanbulmedical.com"
+                class="social-icon"
+                title="Email"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+            <div class="footer-links">
+              <a href="#privacy" class="footer-link">Privacy Policy</a>
+              <span class="mx-2">|</span>
+              <a href="#terms" class="footer-link">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .social-icon:hover {
+        background: #facc15;
+        color: #1a3c5e;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .footer-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+      }
+
+      .footer-link:hover {
+        color: #facc15;
+        opacity: 1;
+      }
+
+      .footer-brand img {
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .footer-brand img:hover {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .social-icon {
+          width: 35px;
+          height: 35px;
+          font-size: 1rem;
+        }
+
+        .footer-brand {
+          margin-bottom: 1rem;
+        }
+      }
+    </style>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- intl-tel-input JS -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+
+      // Initialize Swiper Sliders
+      const heroSwiper = new Swiper(".hero-swiper", {
+        slidesPerView: 1,
+        effect: "fade",
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      const testimonialsSwiper = new Swiper(".testimonials-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+        },
+      });
+
+      // Smooth Scrolling for Navigation Links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const href = this.getAttribute("href");
+          if (href === "#") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            return;
+          }
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      // Navbar Scroll Effect
+      const navbar = document.querySelector(".navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Initialize EmailJS
+      (function () {
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+      })();
+
+      // Form Submission
+      function submitForm2(e) {
+        e.preventDefault();
+        const form = e.target;
+        if (!form.checkValidity()) {
+          form.classList.add("was-validated");
+          return;
+        }
+
+        // Get form data
+        const fullName = document.getElementById("fullName2").value;
+        const email = document.getElementById("email2").value;
+        const phone = document.getElementById("phone2").value;
+        const countryCode = document.getElementById("countryCode2").value;
+        const noseType =
+          document.querySelector('input[name="nose"]:checked')?.value || "";
+
+        // Create email template parameters
+        const templateParams = {
+          to_email: "eisam2350@gmail.com",
+          from_name: fullName,
+          from_email: email,
+          phone: `${countryCode} ${phone}`,
+          nose_type: noseType,
+          message: "New consultation request from website",
+        };
+
+        // Send email using EmailJS
+        emailjs
+          .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+          .then(
+            function (response) {
+              alert("Thank you! Your request has been sent successfully.");
+              form.reset();
+              form.classList.remove("was-validated");
+              document.querySelector(".progress-bar").style.width = "0%";
+            },
+            function (error) {
+              alert(
+                "Sorry, there was an error sending your request. Please try again later."
+              );
+              console.error("Error:", error);
+            }
+          );
+        return false;
+      }
+
+      // Progress Bar Update
+      function updateProgress2() {
+        const totalFields = 4; // nose, name, email, phone
+        let filled = 0;
+        if (
+          [...document.querySelectorAll('input[name="nose"]')].some(
+            (i) => i.checked
+          )
+        )
+          filled++;
+        if (document.getElementById("fullName2").value) filled++;
+        if (document.getElementById("email2").value) filled++;
+        if (document.getElementById("phone2").value) filled++;
+        const progress = (filled / totalFields) * 100;
+        const bar = document.querySelector(".contact-form-box .progress-bar");
+        bar.style.width = progress + "%";
+        bar.setAttribute("aria-valuenow", progress);
+      }
+
+      [
+        ...document.querySelectorAll(
+          "#contactForm2 input, #contactForm2 select"
+        ),
+      ].forEach((el) => {
+        el.addEventListener("input", updateProgress2);
+        el.addEventListener("change", updateProgress2);
+      });
+
+      // On page load, initialize progress
+      document.addEventListener("DOMContentLoaded", updateProgress2);
+      // Initialize intl-tel-input
+      document.addEventListener("DOMContentLoaded", function () {
+        var input = document.querySelector("#simplePhone");
+        if (input) {
+          window.itiInstance = window.intlTelInput(input, {
+            initialCountry: "tr",
+            preferredCountries: ["tr", "eg", "sa", "ae", "us", "gb"],
+            utilsScript:
+              "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+          });
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        const progressBar = document.getElementById('formProgress');
+        const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]');
+
+        inputs.forEach(input => {
+          input.addEventListener('input', updateProgress);
+        });
+
+        function updateProgress() {
+          let filled = 0;
+          inputs.forEach(input => {
+            if (input.value.trim() !== '') {
+              filled++;
+            }
+          });
+          const progress = (filled / inputs.length) * 100;
+          progressBar.style.width = progress + '%';
+        }
+      });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/905333931692" target="_blank" class="whatsapp-float">
+      <div class="whatsapp-content">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Chat with us</span>
+      </div>
+    </a>
+    <script>
+      function submitSimpleContactForm(e) {
+        e.preventDefault();
+        var name = document.getElementById("simpleName").value;
+        var email = document.getElementById("simpleEmail").value;
+        var iti = window.itiInstance;
+        var phone = iti
+          ? iti.getNumber()
+          : document.getElementById("simplePhone").value;
+        var templateParams = {
+          to_email: "Info@nileistanbulmedical.com",
+          from_name: name,
+          from_email: email,
+          phone: phone,
+          message: "New simple contact form submission from website",
+        };
+        emailjs
+          .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+          .then(
+            function (response) {
+              alert("تم إرسال بياناتك بنجاح! سنقوم بالتواصل معك قريباً.");
+              document.getElementById("simpleContactForm").reset();
+              updateFormProgress();
+            },
+            function (error) {
+              alert("حدث خطأ أثناء الإرسال. حاول مرة أخرى.");
+              console.error("Error:", error);
+            }
+          );
+        return false;
+      }
+      // Progress bar animation for the form
+      function updateFormProgress() {
+        var name = document.getElementById("simpleName").value.trim();
+        var email = document.getElementById("simpleEmail").value.trim();
+        var phone = document.getElementById("simplePhone").value.trim();
+        var filled = 0;
+        if (name) filled++;
+        if (email) filled++;
+        if (phone) filled++;
+        var percent = Math.round((filled / 3) * 100);
+        document.getElementById("formProgress").style.width = percent + "%";
+      }
+      ["simpleName", "simpleEmail", "simplePhone"].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) {
+          el.addEventListener("input", updateFormProgress);
+          el.addEventListener("change", updateFormProgress);
+        }
+      });
+
+      // On page load, initialize progress
+      document.addEventListener("DOMContentLoaded", updateFormProgress);
+      // Initialize intl-tel-input
+      document.addEventListener("DOMContentLoaded", function () {
+        var input = document.querySelector("#simplePhone");
+        if (input) {
+          window.itiInstance = window.intlTelInput(input, {
+            initialCountry: "tr",
+            preferredCountries: ["tr", "eg", "sa", "ae", "us", "gb"],
+            utilsScript:
+              "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
