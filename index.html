@@ -2575,8 +2575,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             ></span>
           </div> -->
           <form
-            action="https://formsubmit.co/Info@nileistanbulmedical.com"
-            method="POST"
             id="contactForm"
           >
             <input
@@ -2791,11 +2789,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               Submit
             </button>
             <input type="hidden" name="_captcha" value="false" />
-            <input
-              type="hidden"
-              name="_next"
-              value="https://nileistanbulmedical.com/thanks.html"
-            />
           </form>
         </div>
         <div class="contact-info-box">
@@ -2838,19 +2831,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         document
           .getElementById("contactForm")
           .addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent default submission to handle phone number
+            e.preventDefault(); // منع السلوك الافتراضي للنموذج
+            
+            // جمع بيانات النموذج
+            const name = this.querySelector('input[name="name"]').value;
+            const email = this.querySelector('input[name="email"]').value;
             const countryCode = document.getElementById("countryCode").value;
             const phoneInput = document.getElementById("phoneInput").value;
             const fullPhone = document.getElementById("fullPhone");
-
-            // Combine country code and phone number
-            if (countryCode && phoneInput) {
-              fullPhone.value = `${countryCode}${phoneInput}`;
-              // Proceed with form submission
-              this.submit();
-            } else {
+            
+            // التحقق من وجود رمز البلد ورقم الهاتف
+            if (!countryCode || !phoneInput) {
               alert("Please select a country code and enter a phone number.");
+              return;
             }
+            
+            // دمج رمز البلد ورقم الهاتف
+            fullPhone.value = `${countryCode}${phoneInput}`;
+            
+            // إرسال البيانات باستخدام AJAX/fetch
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('country_code', countryCode); // إرسال رمز البلد منفصلا
+            formData.append('phone_number', phoneInput); // إرسال رقم الهاتف منفصلا
+            formData.append('full_phone', fullPhone.value); // إرسال الرقم المدمج
+            formData.append('_captcha', 'false');
+            
+            // عرض رسالة تحميل
+            this.querySelector('button[type="submit"]').innerHTML = 'Sending...';
+            this.querySelector('button[type="submit"]').disabled = true;
+            
+            fetch('https://formsubmit.co/Info@nileistanbulmedical.com', {
+              method: 'POST',
+              body: formData
+            })
+            .then(response => {
+              if (response.ok) {
+                // عرض رسالة نجاح
+                const formContainer = document.querySelector('.contact-form-box');
+                formContainer.innerHTML = `
+                  <div style="text-align: center; padding: 20px;">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#FACC15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <h2 style="margin-top: 20px; color: #FACC15;">Thank You!</h2>
+                    <p style="margin-top: 10px; font-size: 1.1rem;">Your message has been sent successfully.</p>
+                    <p style="margin-top: 5px;">We'll get back to you shortly.</p>
+                  </div>
+                `;
+              } else {
+                throw new Error('Error submitting form');
+              }
+            })
+            .catch(error => {
+              console.error('Error:', error);
+              this.querySelector('button[type="submit"]').innerHTML = 'Submit';
+              this.querySelector('button[type="submit"]').disabled = false;
+              alert('There was an error sending your message. Please try again.');
+            });
           });
       </script>
     </section>
