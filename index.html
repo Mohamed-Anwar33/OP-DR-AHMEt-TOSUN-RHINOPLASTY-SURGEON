@@ -2831,62 +2831,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         document
           .getElementById("contactForm")
           .addEventListener("submit", function (e) {
-            e.preventDefault(); // منع السلوك الافتراضي للنموذج
+            e.preventDefault(); // Prevent default form behavior
             
-            // جمع بيانات النموذج
+            // Collect form data
             const name = this.querySelector('input[name="name"]').value;
             const email = this.querySelector('input[name="email"]').value;
             const countryCode = document.getElementById("countryCode").value;
             const phoneInput = document.getElementById("phoneInput").value;
             const fullPhone = document.getElementById("fullPhone");
             
-            // التحقق من وجود رمز البلد ورقم الهاتف
+            // Validate country code and phone
             if (!countryCode || !phoneInput) {
               alert("Please select a country code and enter a phone number.");
               return;
             }
             
-            // دمج رمز البلد ورقم الهاتف
+            // Combine country code and phone
             fullPhone.value = `${countryCode}${phoneInput}`;
             
-            // إرسال البيانات باستخدام AJAX/fetch
+            // Create form data for submission
             const formData = new FormData();
             formData.append('name', name);
             formData.append('email', email);
-            formData.append('country_code', countryCode); // إرسال رمز البلد منفصلا
-            formData.append('phone_number', phoneInput); // إرسال رقم الهاتف منفصلا
-            formData.append('full_phone', fullPhone.value); // إرسال الرقم المدمج
+            formData.append('country_code', countryCode);
+            formData.append('phone_number', phoneInput);
+            formData.append('full_phone', fullPhone.value);
             formData.append('_captcha', 'false');
+            formData.append('_next', 'thank-you.html?name=' + encodeURIComponent(name));
             
-            // عرض رسالة تحميل
+            // Show loading message
             this.querySelector('button[type="submit"]').innerHTML = 'Sending...';
             this.querySelector('button[type="submit"]').disabled = true;
             
+            // Animation for smooth transition
+            const formProgressBar = document.getElementById('formProgressBar');
+            formProgressBar.style.width = '100%';
+            formProgressBar.style.transition = 'width 1s ease-in-out';
+            
+            // Submit the form
             fetch('https://formsubmit.co/Info@nileistanbulmedical.com', {
               method: 'POST',
               body: formData
             })
             .then(response => {
               if (response.ok) {
-                // عرض رسالة نجاح
-                const formContainer = document.querySelector('.contact-form-box');
-                formContainer.innerHTML = `
-                  <div style="text-align: center; padding: 20px;">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#FACC15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                    <h2 style="margin-top: 20px; color: #FACC15;">Thank You!</h2>
-                    <p style="margin-top: 10px; font-size: 1.1rem;">Your message has been sent successfully.</p>
-                    <p style="margin-top: 5px;">We'll get back to you shortly.</p>
-                  </div>
-                `;
+                // Redirect to thank you page with name parameter
+                window.location.href = 'thank-you.html?name=' + encodeURIComponent(name);
               } else {
                 throw new Error('Error submitting form');
               }
             })
             .catch(error => {
               console.error('Error:', error);
+              formProgressBar.style.width = '0%';
               this.querySelector('button[type="submit"]').innerHTML = 'Submit';
               this.querySelector('button[type="submit"]').disabled = false;
               alert('There was an error sending your message. Please try again.');
